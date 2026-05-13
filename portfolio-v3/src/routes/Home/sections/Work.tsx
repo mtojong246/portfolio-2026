@@ -73,13 +73,12 @@ const projects: WorkInformation[] = [
 export default function Work() {
 
     return (
-        <div className="w-full bg-dark px-[64px] py-[100px]">
+        <div id="work" className="w-full bg-dark px-[64px] py-[100px]">
             <div className="mx-auto max-w-[1200px] h-full">
                 <div className="flex flex-col justify-start items-start gap-[64px] w-full">
                     <SectionHeader 
                         title="Work"
                         subtitle="What I've Made"
-                        id="work"
                     />
                     <motion.div className="work-grid w-full" layout>
                         <AnimatePresence mode="popLayout">

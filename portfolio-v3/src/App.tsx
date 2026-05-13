@@ -12,8 +12,11 @@ const loadTagCanvas = () => {
       outlineColour: 'transparent',
       reverse: true,
       depth: 0.8,
-      maxSpeed: 0.05,
+      maxSpeed: 0.01,
       weight: true,
+      noMouse: true,
+      initial: [0.3, -0.1],
+      wheelZoom: false,
     });
   } catch(err:any) {
     console.log(err);

@@ -1,40 +1,44 @@
+import { MouseEvent } from 'react';
+import { useNavigate } from 'react-router';
 import { ReactComponent as DownloadIcon } from '../../../assets/icons/Download.svg';
 import Button from '../../../components/Buttons/Button';
 
-const scrollToSection = (e: any, id: string) => {
-    e.preventDefault();
+const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: 'smooth' })
 }
 
-const routes: {label: string, link: string}[] = [
-    {
-        label: "// home",
-        link: '/'
-    },
-    {
-        label: "// about",
-        link: '#about',
-    },
-    {
-        label: "// experience",
-        link: "#experience",
-    },
-    {
-        label: "// work",
-        link: "#work",
-    },
-    {
-        label: "// contact",
-        link: "#contact",
-    }
-]
 
 export default function NavigationBar({
     isSticky,
 }: {
     isSticky: boolean,
 }) {
+    const navigate = useNavigate();
+
+    const routes: {label: string, action: (e:any) => void}[] = [
+        {
+            label: "// home",
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigate('/') }
+        },
+        {
+            label: "// about",
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('about') }
+        },
+        {
+            label: "// experience",
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('experience') }
+        },
+        {
+            label: "// work",
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('work') }
+        },
+        {
+            label: "// contact",
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('contact') }
+        }
+    ]
+
     
 
     return (
@@ -46,10 +50,10 @@ export default function NavigationBar({
             </div>
             <div className="flex gap-5">
                 {routes.map(route => {
-                    const { label, link } = route;
+                    const { label, action } = route;
 
                     return (
-                        <a href={link} className="text-white hover:text-accent transition-all">{label}</a>
+                        <button onClick={action} className="text-white hover:text-accent transition-all">{label}</button>
                     )
                 })}
             </div>

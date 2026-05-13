@@ -64,13 +64,12 @@ const contacts: ContactInfo[] = [
 
 export default function Contact() {
     return (
-        <div className="w-full bg-dark px-[64px] py-[100px]">
+        <div id="contact" className="w-full bg-dark px-[64px] py-[100px]">
             <div className="mx-auto max-w-[1200px] h-full">
                 <div className="flex flex-col justify-start items-start gap-[64px] w-full">
                     <SectionHeader 
                         title="Contact"
                         subtitle="Get In Touch"
-                        id="contact"
                     />
                     <div className="w-full flex justify-between items-start gap-[64px]">
                         <div className="w-1/2 flex flex-col justify-start items-start">
