@@ -1,6 +1,7 @@
 import Button from "../../../components/Buttons/Button";
 import SectionHeader from "../../../components/SectionHeader";
 import { ReactComponent as DownloadIcon } from '../../../assets/icons/Download.svg';
+import Timeline from "../components/Timeline";
 
 export default function Experience() {
     return (
@@ -20,6 +21,7 @@ export default function Experience() {
                             action={(e:any) => {}}
                         />
                     </div>
+                    <Timeline />
                 </div>
             </div>
         </div>
