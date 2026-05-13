@@ -1,5 +1,6 @@
 import SectionHeader from "../../../components/SectionHeader";
 import { motion, AnimatePresence } from 'motion/react';
+import { projects, ProjectType } from "../../../projects";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
@@ -16,13 +17,13 @@ interface WorkInformation {
 const WorkCard = ({
     workInfo,
 }: {
-    workInfo: WorkInformation,
+    workInfo: ProjectType,
 }) => {
-    const { size, projectTitle, tech } = workInfo;
+    const { size, title, tech } = workInfo;
 
     return (
         <motion.button
-            key={projectTitle} 
+            key={title} 
             layout 
             variants={cardVariants}
             initial="hidden"
@@ -32,43 +33,15 @@ const WorkCard = ({
             className={`${size} flex flex-col justify-start items-stretch rounded-[16px] border border-outline overflow-hidden`}
         >
             <div className="grow w-full bg-light">
-
+                <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"  className="object-cover h-full"/>
             </div>
             <div className="w-full flex flex-col justify-start items-start gap-2 p-6 shrink-0">
-                <p className="text-white font-semibold">{projectTitle}</p>
-                <p className="text-secondary text-[12px]">{tech}</p>
+                <p className="text-white font-semibold">{title}</p>
+                <p className="text-secondary text-[12px] text-left">{tech.join(' / ')}</p>
             </div>
         </motion.button>
     )
 }
-
-const projects: WorkInformation[] = [
-    {
-        projectTitle: "AI Report Generation Tool",
-        tech: "React / FastAPI / Langchain",
-        size: "big",
-    },
-    {
-        projectTitle: "CPI Business Website",
-        tech: "Squarespace",
-        size: "",
-    },
-    {
-        projectTitle: "Admin Dashboard",
-        tech: "React / Firebase",
-        size: "",
-    },
-    {
-        projectTitle: "ML",
-        tech: "React / Firebase",
-        size: "big",
-    },
-    {
-        projectTitle: "myPAbox v2",
-        tech: "React / Firebase",
-        size: "",
-    },
-]
 
 export default function Work() {
 
