@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router';
 import Navigation from './routes/Navigation/pages/Navigation';
@@ -28,6 +27,30 @@ function App() {
   useEffect(() => {
     loadTagCanvas();
   }, []);
+
+  useEffect(() => {
+    const items = document.querySelectorAll(".timeline-item");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px 0px -100px 0px",
+      }
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    // cleanup — disconnect the observer when the component unmounts
+    return () => observer.disconnect();
+  }, []); // empty array = runs once after mount
   
   return (
     <Routes>
