@@ -71,7 +71,7 @@ export default function Contact() {
                         subtitle="Get In Touch"
                         id="contact"
                     />
-                    <div className="w-full flex justify-between items-center gap-[64px]">
+                    <div className="w-full flex justify-between items-start gap-[64px]">
                         <div className="w-1/2 flex flex-col justify-start items-start">
                             <p className="mb-[32px] text-white">
                                 Lorem ipsum dolor sit amet consectetur. Quis quis vitae pretium pharetra. 
