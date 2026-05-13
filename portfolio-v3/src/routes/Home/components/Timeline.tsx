@@ -56,10 +56,67 @@ const TimelineContainer = ({
     )
 }
 
+const experiences: ExperienceInfo[] = [
+    {
+        positionTitle: "Software Engineer",
+        companyName: "CPI",
+        employmentType: "Full-Time",
+        locationType: "Raleigh, NC (On-Site)",
+        dateRange: "Feb 2024 - Present",
+        skills: [
+            "JS/TS",
+            "React.js",
+            "Python",
+            "FastAPI",
+            "TailwindCSS",
+            "Bootstrap",
+        ],
+        description: "Lorem ipsum dolor sit amet consectetur. Augue sed cras mi posuere quis sagittis convallis cras.",
+    },
+    {
+        positionTitle: "Fullstack Software Developer",
+        companyName: "myPAbox",
+        employmentType: "Contract",
+        locationType: "Remote",
+        dateRange: "June 2023 - Present",
+        skills: [
+            "JS/TS",
+            "React.js",
+            "Firebase",
+            "OpenAI API",
+            "TailwindCSS",
+        ],
+        description: "Lorem ipsum dolor sit amet consectetur. Augue sed cras mi posuere quis sagittis convallis cras.",
+    },
+    {
+        positionTitle: "Freelance Developer",
+        companyName: "Self-Employed",
+        employmentType: "Contract",
+        locationType: "Remote",
+        dateRange: "June 2023 - Present",
+        skills: [
+            "JS/TS",
+            "React.js",
+            "Next.js",
+            "TailwindCSS",
+            "Wordpress",
+            "Squarespace",
+            "Wix",
+        ],
+        description: "Lorem ipsum dolor sit amet consectetur. Augue sed cras mi posuere quis sagittis convallis cras.",
+    },
+]
+
+
 export default function Timeline() {
     return (
         <div className="timeline w-full relative">
-
+            {experiences.map((exp, i) => (
+                <TimelineContainer 
+                    dir={i%2 === 0 ? "left" : "right"}
+                    experienceInfo={exp}
+                />
+            ))}
         </div>
     )
 }
