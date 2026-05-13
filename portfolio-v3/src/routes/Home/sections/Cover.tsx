@@ -9,7 +9,7 @@ const LinkButton = ({ icon, link }: { icon: ReactNode, link: string }) => {
             href={link}
             target='_blank'
             rel='noreferrer'
-            className='text-white hover:text-accent transition-all flex justify-center items-center aspect-square border border-outline w-[60px] rounded-full'
+            className='contact-card text-white hover:text-accent transition-all flex justify-center items-center aspect-square border border-outline hover:border-accent w-[60px] rounded-full'
         >
             <div className='w-[24px]'>{icon}</div>
         </a>

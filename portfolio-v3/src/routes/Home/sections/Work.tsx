@@ -1,5 +1,11 @@
-import { useEffect, useRef } from "react";
 import SectionHeader from "../../../components/SectionHeader";
+import { motion, AnimatePresence } from 'motion/react';
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  visible: { opacity: 1, scale: 1, y: 0 },
+  exit: { opacity: 0, scale: 0.95, y: -10 },
+};
 
 interface WorkInformation {
     size: string;
@@ -15,7 +21,16 @@ const WorkCard = ({
     const { size, projectTitle, tech } = workInfo;
 
     return (
-        <div className={`${size} flex flex-col justify-start items-stretch rounded-[16px] border border-outline overflow-hidden`}>
+        <motion.button
+            key={projectTitle} 
+            layout 
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className={`${size} flex flex-col justify-start items-stretch rounded-[16px] border border-outline overflow-hidden`}
+        >
             <div className="grow w-full bg-light">
 
             </div>
@@ -23,7 +38,7 @@ const WorkCard = ({
                 <p className="text-white font-semibold">{projectTitle}</p>
                 <p className="text-secondary text-[12px]">{tech}</p>
             </div>
-        </div>
+        </motion.button>
     )
 }
 
@@ -56,20 +71,6 @@ const projects: WorkInformation[] = [
 ]
 
 export default function Work() {
-    // const cardRefs = useRef([]);
-
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver(
-    //         (entries) => {
-    //             entries.forEach((entry) => {
-    //             if (entry.isIntersecting) entry.target.classList.add("visible");
-    //             });
-    //         },
-    //         { threshold: 0.1 }
-    //     );
-    //     cardRefs.current.forEach((el) => el && observer.observe(el));
-    //     return () => observer.disconnect();
-    // }, []);
 
     return (
         <div className="w-full bg-dark px-[64px] py-[100px]">
@@ -80,11 +81,13 @@ export default function Work() {
                         subtitle="What I've Made"
                         id="work"
                     />
-                    <div className="work-grid w-full">
+                    <motion.div className="work-grid w-full" layout>
+                        <AnimatePresence mode="popLayout">
                         {projects.map(project => (
                             <WorkCard workInfo={project}/>
                         ))}
-                    </div>
+                        </AnimatePresence>
+                    </motion.div>
                 </div>
             </div>
         </div>

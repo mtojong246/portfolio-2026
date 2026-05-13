@@ -4,6 +4,7 @@ import { ReactComponent as EmailIcon } from '../../../assets/icons/Email.svg';
 import { ReactComponent as LinkedinIcon } from '../../../assets/icons/Linkedin.svg';
 import { ReactComponent as GithubIcon } from '../../../assets/icons/Github.svg';
 import ContactForm from "../components/ContactForm";
+import { EMAIL_LINK, GITHUB_LINK, LINKEDIN_LINK } from "../../../constants";
 
 interface ContactInfo {
     contactType: string;
@@ -25,11 +26,11 @@ const ContactCard = ({
     } = contactInfo;
 
     return (
-        <a 
+        <a
             href={link}
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-5 rounded-lg border border-outline bg-light transition-all flex justify-start items-center gap-4"
+            className="contact-card px-4 py-5 rounded-lg border border-outline hover:border-accent bg-light transition-all flex justify-start items-center gap-4"
         >
             <div className="w-[32px] text-white">{icon}</div>
             <div className="flex flex-col justify-start items-start gap-1">
@@ -45,19 +46,19 @@ const contacts: ContactInfo[] = [
         contactType: "LinkedIn",
         contactDetails: "@melanie-tojong-4b5149158",
         icon: <LinkedinIcon />,
-        link: 'https://www.linkedin.com/in/melanie-tojong-4b5149158/',
+        link: LINKEDIN_LINK,
     },
     {
         contactType: "Github",
         contactDetails: "@mtojong246",
         icon: <GithubIcon />,
-        link: "https://github.com/mtojong246",
+        link: GITHUB_LINK,
     },
     {
         contactType: "Email",
         contactDetails: "mtojong@gmail.com",
         icon: <EmailIcon />,
-        link: "mailto:mtojong@gmail.com",
+        link: EMAIL_LINK,
     }
 ]
 

@@ -1,6 +1,11 @@
 import { ReactComponent as DownloadIcon } from '../../../assets/icons/Download.svg';
 import Button from '../../../components/Buttons/Button';
 
+const scrollToSection = (e: any, id: string) => {
+    e.preventDefault();
+    const section = document.getElementById(id);
+    if (section) section.scrollIntoView({ behavior: 'smooth' })
+}
 
 const routes: {label: string, link: string}[] = [
     {
@@ -12,8 +17,8 @@ const routes: {label: string, link: string}[] = [
         link: '#about',
     },
     {
-        label: "// experiences",
-        link: "#experiences",
+        label: "// experience",
+        link: "#experience",
     },
     {
         label: "// work",
