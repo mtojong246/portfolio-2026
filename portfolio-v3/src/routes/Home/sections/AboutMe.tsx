@@ -5,7 +5,7 @@ export default function AboutMe() {
     return (
         <div className="w-full bg-dark px-[64px] py-[100px]">
             <div className="mx-auto max-w-[1200px] h-full">
-                <div className="flex justify-between items-center gap-[64px] w-full">
+                <div className="flex flex-wrap justify-between items-center gap-[64px] w-full">
                     <div className="w-[500px] shrink-0 flex flex-col justify-start items-start gap-8">
                         <SectionHeader 
                             title="About Me"

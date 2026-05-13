@@ -33,7 +33,7 @@ const links: { icon: ReactNode, link: string }[] = [
 
 export default function Cover() {
     return (
-        <div className="w-full h-screen bg-dark">
+        <div className="w-full h-screen bg-dark px-[64px]">
             <div className="flex flex-col justify-center items-center mx-auto h-full max-w-[1200px]">
                 <h1 className="text-white text-[96px] font-bold mb-3">MELANIE TOJONG</h1>
                 <h3 className="text-white text-[22px] font-medium mb-[64px]">SOFTWARE ENGINEER, FRONTEND DEVELOPER & DESIGNER</h3>
