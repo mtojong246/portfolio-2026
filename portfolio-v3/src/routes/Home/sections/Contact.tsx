@@ -43,13 +43,13 @@ const ContactCard = ({
 const contacts: ContactInfo[] = [
     {
         contactType: "LinkedIn",
-        contactDetails: "in/melanie-tojong-4b5149158",
+        contactDetails: "@melanie-tojong-4b5149158",
         icon: <LinkedinIcon />,
         link: 'https://www.linkedin.com/in/melanie-tojong-4b5149158/',
     },
     {
         contactType: "Github",
-        contactDetails: "github.com/mtojong246",
+        contactDetails: "@mtojong246",
         icon: <GithubIcon />,
         link: "https://github.com/mtojong246",
     },
