@@ -21,7 +21,7 @@ export default function SkillsChart() {
     return (
         <>
         <div id="skillsCanvasContainer">
-            <canvas width={500} height={500} id="skillsCanvas"></canvas>
+            <canvas width={600} height={600} id="skillsCanvas"></canvas>
         </div>
         <div id="tags">
             <ul>
