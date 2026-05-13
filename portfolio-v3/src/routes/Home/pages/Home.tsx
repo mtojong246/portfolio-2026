@@ -1,6 +1,7 @@
 import AboutMe from "../sections/AboutMe";
 import Cover from "../sections/Cover";
 import Experience from "../sections/Experience";
+import Work from "../sections/Work";
 
 export default function Home() {
     return (
@@ -8,6 +9,7 @@ export default function Home() {
             <Cover />
             <AboutMe />
             <Experience />
+            <Work />
         </>
     )
 }
