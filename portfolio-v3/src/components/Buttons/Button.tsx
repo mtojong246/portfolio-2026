@@ -10,13 +10,15 @@ export default function Button({
     label,
     icon,
     dir,
+    action,
 }: {
     label: string,
     icon: ReactNode,
     dir: 'left' | 'right',
+    action: (e:any) => void,
 }) {
     return (
-        <button className="flex justify-center items-center text-accent">
+        <button onClick={action} className="flex justify-center items-center text-accent">
             {dir === 'left' && (
                 <IconComponent icon={icon}/>
             )}

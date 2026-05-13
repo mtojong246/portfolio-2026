@@ -1,3 +1,5 @@
+import { ReactComponent as DownloadIcon } from '../../../assets/icons/Download.svg';
+import Button from '../../../components/Buttons/Button';
 
 
 const routes: {label: string, link: string}[] = [
@@ -48,7 +50,12 @@ export default function NavigationBar({
             </div>
             <div className="grow flex justify-end">
                 {!isSticky && (
-                    <button></button>
+                    <Button 
+                        label='resume'
+                        icon={<DownloadIcon />}
+                        dir='left'
+                        action={(e:any) => {}}
+                    />
                 )}
             </div>
         </div>
