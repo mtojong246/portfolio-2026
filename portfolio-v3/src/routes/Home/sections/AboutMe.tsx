@@ -1,4 +1,5 @@
 import SectionHeader from "../../../components/SectionHeader";
+import SkillsChart from "../components/SkillsChart";
 
 export default function AboutMe() {
     return (
@@ -17,7 +18,9 @@ export default function AboutMe() {
                             Lorem quam tellus enim eget ultrices ut mauris sed aliquet. Faucibus morbi elementum vitae maecenas ut tellus. Amet tortor etiam facilisis fames leo. Pellentesque proin dignissim neque tincidunt quisque commodo. Mattis elementum lobortis nunc euismod imperdiet scelerisque tempus.
                         </p>
                     </div>
-                    <div className="grow"></div>
+                    <div className="grow">
+                        <SkillsChart />
+                    </div>
                 </div>
             </div>
         </div>
