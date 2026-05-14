@@ -5,6 +5,7 @@ import Cover from "../sections/Cover";
 import Experience from "../sections/Experience";
 import Work from "../sections/Work";
 import StickyNav from "../components/StickyNav";
+import Menu from "../../Navigation/components/Menu";
 
 const loadTagCanvas = () => {
   try {
@@ -25,11 +26,35 @@ const loadTagCanvas = () => {
     const canvasContainer = document.getElementById('skillsCanvasContainer')
     if (canvasContainer) canvasContainer.style.display = 'none';
   }
+
+
 }
 
-export default function Home() {
+export default function Home({
+    showMenu,
+    toggleMenu,
+}: {
+    showMenu: boolean,
+    toggleMenu: () => void,
+}) {
     useEffect(() => {
         loadTagCanvas();
+
+        const canvas = document.getElementById('skillsCanvas') as HTMLCanvasElement;
+        const container = document.getElementById('skillsCanvasContainer');
+
+        const resizeObserver = new ResizeObserver(() => {
+            if (!canvas || !container) return;
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientWidth;
+            (window as any).TagCanvas.Update("skillsCanvas");
+        });
+
+        if (container) resizeObserver.observe(container);
+
+        return () => {
+            resizeObserver.disconnect();
+        }
     }, []);
     
     useEffect(() => {
@@ -83,6 +108,7 @@ export default function Home() {
     return (
         <>
             <StickyNav />
+            <Menu showMenu={showMenu} toggleMenu={toggleMenu}/>
             <Cover />
             <AboutMe />
             <Experience />

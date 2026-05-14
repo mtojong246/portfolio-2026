@@ -20,8 +20,8 @@ const skills: string[] = [
 export default function SkillsChart() {
     return (
         <>
-        <div id="skillsCanvasContainer">
-            <canvas width={600} height={600} id="skillsCanvas"></canvas>
+        <div id="skillsCanvasContainer" className="w-full max-w-[500px] aspect-square">
+            <canvas width={500} height={500} id="skillsCanvas"></canvas>
         </div>
         <div id="tags">
             <ul>

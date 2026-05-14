@@ -53,14 +53,14 @@ export default function Work() {
     } 
 
     return (
-        <div id="work" className="w-full bg-dark px-[64px] py-[100px]">
+        <div id="work" className="w-full bg-dark px-6 sm:px-10 py-[64px] sm:py-[100px]">
             <div className="mx-auto max-w-[1200px] h-full">
                 <div className="flex flex-col justify-start items-start gap-[64px] w-full">
                     <SectionHeader 
                         title="Work"
                         subtitle="What I've Made"
                     />
-                    <motion.div className="work-grid w-full" layout>
+                    <motion.div className="work-grid w-full gap-6 sm:gap-8" layout>
                         <AnimatePresence mode="popLayout">
                         {projects.map(project => (
                             <WorkCard workInfo={project} navigateToProject={navigateToProject}/>

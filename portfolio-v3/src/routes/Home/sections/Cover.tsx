@@ -36,7 +36,7 @@ const links: { icon: ReactNode, link: string }[] = [
 export default function Cover() {
 
     return (
-        <div className="w-full h-screen px-[64px] bg-dark relative">
+        <div className="w-full h-screen px-6 sm:px-10 bg-dark relative">
             <div className='cover absolute top-0 left-0 right-0 bottom-0'>
                 <div className='light x1'></div>
                 <div className='light x2'></div>
@@ -51,13 +51,13 @@ export default function Cover() {
             <div className='cover-fade absolute top-0 left-0 right-0 bottom-0 z-10'></div>
             <AnimatePresence>
                 <div className="flex flex-col justify-center items-center mx-auto h-full max-w-[1200px] relative z-20">
-                    <h1 className="text-white text-[96px] font-bold mb-3">MELANIE TOJONG</h1>
+                    <h1 className="text-center text-white lg:text-[96px] md:text-[64px] sm:text-[54px] text-[48px] font-semibold mb-3">MELANIE TOJONG</h1>
                     <motion.h3 
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.5, ease: 'easeIn' }}
                         id='cover-subtitle'
-                        className="text-white text-[22px] font-medium mb-[64px]"
+                        className="text-white text-[22px] mb-[64px] font-mono text-center"
                     >
                         SOFTWARE ENGINEER, FRONTEND DEVELOPER & DESIGNER
                     </motion.h3>

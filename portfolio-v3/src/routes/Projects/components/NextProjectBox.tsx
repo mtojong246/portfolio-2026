@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { ReactComponent as ArrowRight } from '../../../assets/icons/Arrow-Right.svg';
 import { ReactComponent as ArrowLeft } from '../../../assets/icons/Arrow-Left.svg';
 import { motion } from 'motion/react';
+import { generateRandomString } from "../../../utils";
 
 const ArrowButton = ({
     icon,
@@ -70,7 +71,7 @@ export default function NextProjectBox({
 
     return (
         <motion.div 
-            key={currentProject ? currentProject.id : ''}
+            key={generateRandomString()}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.3, ease: 'easeIn' }}

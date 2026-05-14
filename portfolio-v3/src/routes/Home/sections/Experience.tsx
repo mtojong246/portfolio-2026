@@ -5,7 +5,7 @@ import Timeline from "../components/Timeline";
 
 export default function Experience() {
     return (
-        <div id="experience" className="w-full bg-dark px-[64px] py-[100px]">
+        <div id="experience" className="w-full bg-dark px-6 sm:px-10 py-[64px] sm:py-[100px]">
             <div className="mx-auto max-w-[1200px] h-full">
                 <div className="flex flex-col justify-start items-start gap-[64px] w-full">
                     <div className="w-full flex justify-between items-center">

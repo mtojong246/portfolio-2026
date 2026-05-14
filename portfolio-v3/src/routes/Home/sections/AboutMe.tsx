@@ -3,10 +3,10 @@ import SkillsChart from "../components/SkillsChart";
 
 export default function AboutMe() {
     return (
-        <div id="about" className="w-full bg-dark px-[64px] py-[100px]">
+        <div id="about" className="w-full bg-dark px-6 sm:px-10 py-[64px] sm:py-[100px]">
             <div className="mx-auto max-w-[1200px] h-full">
-                <div className="flex flex-wrap justify-between items-center gap-[64px] w-full">
-                    <div className="w-[500px] shrink-0 flex flex-col justify-start items-start gap-8">
+                <div className="flex flex-col min-[870px]:flex-row justify-center md:justify-between items-center gap-[64px] w-full">
+                    <div className="max-w-[600px] flex flex-col justify-start items-start gap-8">
                         <SectionHeader 
                             title="About Me"
                             subtitle="Who I Am"
@@ -18,9 +18,6 @@ export default function AboutMe() {
                         </p>
                     </div>
                     <SkillsChart />
-                    {/* <div className="grow">
-                        
-                    </div> */}
                 </div>
             </div>
         </div>
