@@ -12,6 +12,23 @@ interface ProjectLink {
     link: string,
 }
 
+const MetadataComponent = ({
+    children,
+    label,
+}: {
+    children: ReactNode,
+    label: string,
+}) => {
+    return (
+        <div className="w-full">
+            <div className="w-full pb-1 border-b border-outline text-white font-semibold mb-3">
+                {label}
+            </div>
+            {children}
+        </div>
+    )
+}
+
 export default function Project() {
     const { id } = useParams();
     const [ project, setProject ] = useState<ProjectType | null>(null);
@@ -79,8 +96,26 @@ export default function Project() {
                         <p className="text-white">Lorem ipsum dolor sit amet consectetur. Amet faucibus malesuada enim justo aliquam eget. Donec dui morbi non amet. Vitae elementum fermentum vitae viverra morbi. Metus auctor massa tristique nulla hac enim etiam sed.</p>
                     </div>
                     {/* Image/gallery */}
-                    <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden">
+                    <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden mb-[64px]">
                         <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"  className="object-cover h-full w-full"/>
+                    </div>
+                    {/* Case study */}
+                    <div className="w-full flex justify-start items-start gap-[64px]">
+                        {/* Content */}
+                        <div className="w-full flex flex-col justify-start items-start max-w-[600px] gap-[64px]"></div>
+                        {/* Metadata */}
+                        <div className="w-full max-w-[400px] flex flex-col justify-start items-start gap-8">
+                            <MetadataComponent label="Client">
+                                <p className="text-white">{project.client}</p>
+                            </MetadataComponent>
+                            <MetadataComponent label="Tech">
+                                <div className="w-full flex flex-wrap gap-2 justify-start items-start">
+                                    {project.tech.map(tech => (
+                                        <div className="px-[12px] py-[2px] text-[14px] text-black bg-accent-secondary rounded-xl">{tech}</div>
+                                    ))}
+                                </div>
+                            </MetadataComponent>
+                        </div>
                     </div>
                 </div>
             </div>
