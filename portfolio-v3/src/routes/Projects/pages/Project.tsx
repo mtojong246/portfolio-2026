@@ -6,6 +6,7 @@ import { ReactComponent as LinkIcon } from '../../../assets/icons/Link.svg';
 import { ReactComponent as GithubIcon } from '../../../assets/icons/Github.svg';
 import StatusBadge from "../components/StatusBadge";
 import { motion, AnimatePresence } from 'motion/react';
+import NextProjectBox from "../components/NextProjectBox";
 
 interface ProjectLink {
     label: string,
@@ -85,6 +86,7 @@ export default function Project() {
                     {/* Title section */}
                     <div className="flex flex-col justify-start items-start gap-[48px] max-w-[600px]">   
                         <motion.div 
+                            key={id}
                             initial={{ opacity: 0, y: 8 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: 0.2, ease: 'easeIn' }}
@@ -146,6 +148,7 @@ export default function Project() {
             </div>
             )}
         </div>
+        <NextProjectBox projects={projects} currentProject={project}/>
         </AnimatePresence>
     )
 }
