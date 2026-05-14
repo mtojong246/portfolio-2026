@@ -8,11 +8,6 @@ const cardVariants = {
   exit: { opacity: 0, scale: 0.95, y: -10 },
 };
 
-interface WorkInformation {
-    size: string;
-    projectTitle: string;
-    tech: string;
-}
 
 const WorkCard = ({
     workInfo,
@@ -30,14 +25,15 @@ const WorkCard = ({
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={`${size} flex flex-col justify-start items-stretch rounded-[16px] border border-outline overflow-hidden`}
+            className={`${size} work-card flex flex-col justify-start items-stretch rounded-[16px] border border-outline overflow-hidden`}
         >
-            <div className="grow w-full bg-light">
+            <div className="grow w-full bg-light overflow-hidden">
                 <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"  className="object-cover h-full"/>
             </div>
-            <div className="w-full flex flex-col justify-start items-start gap-2 p-6 shrink-0">
+            <div className="w-full flex flex-col justify-start items-start gap-2 p-6 shrink-0 relative">
                 <p className="text-white font-semibold">{title}</p>
-                <p className="text-secondary text-[12px] text-left">{tech.join(' / ')}</p>
+                <p className="subtitle-default text-secondary text-[12px] text-left">{tech.join(' / ')}</p>
+                <p className="subtitle-hover text-accent text-[12px] text-left">Show Project →</p>
             </div>
         </motion.button>
     )

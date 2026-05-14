@@ -65,6 +65,42 @@
   grid-row: span 2;
 }
 
+.work-card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.work-card:hover img {
+  transform: scale(1.1);
+}
+
+.subtitle-default,
+.subtitle-hover {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.subtitle-default {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.subtitle-hover {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.work-card:hover .subtitle-default {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.work-card:hover .subtitle-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
