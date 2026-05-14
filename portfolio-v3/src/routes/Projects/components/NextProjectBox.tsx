@@ -75,7 +75,7 @@ export default function NextProjectBox({
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.3, ease: 'easeIn' }}
-            className="fixed bottom-[64px] right-[64px] max-w-[260px]"
+            className="fixed bottom-[24px] sm:bottom-[40px] right-[24px] sm:right-[40px] max-w-[260px]"
         >
             <div className="relative bg-white rounded-[16px] p-8 flex flex-col justify-start items-start gap-6">
                 <div className="flex justify-between items-center gap-3">

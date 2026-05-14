@@ -77,11 +77,11 @@ export default function Project() {
     return (
         <AnimatePresence>
         <div className="w-full min-h-screen bg-dark">
-            <div className="w-full px-[64px] pt-[120px]">
+            <div className="w-full px-6 sm:px-10 pt-[120px]">
                 <BackButton />
             </div>
             {project && (
-            <div className="w-full p-[64px]">
+            <div className="w-full p-6 sm:p-10">
                 <div className="max-w-[1200px] mx-auto flex flex-col justify-start item-start">
                     {/* Title section */}
                     <div className="flex flex-col justify-start items-start gap-[48px] max-w-[600px]">   
@@ -119,7 +119,7 @@ export default function Project() {
                         <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"  className="object-cover h-full w-full"/>
                     </div>
                     {/* Case study */}
-                    <div className="w-full flex justify-start items-start gap-[64px]">
+                    <div className="w-full flex flex-col-reverse sm:flex-row justify-start items-start gap-[64px]">
                         {/* Content */}
                         <div className="w-full flex flex-col justify-start items-start max-w-[600px] gap-[64px]">
                             <p className="text-white">{project.introduction}</p>
@@ -131,7 +131,7 @@ export default function Project() {
                             ))}
                         </div>
                         {/* Metadata */}
-                        <div className="w-full max-w-[400px] flex flex-col justify-start items-start gap-8">
+                        <div className="w-full max-w-full sm:max-w-[400px] flex flex-col justify-start items-start gap-8">
                             <MetadataComponent label="Client">
                                 <p className="text-white">{project.client}</p>
                             </MetadataComponent>
