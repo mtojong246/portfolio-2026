@@ -384,3 +384,18 @@
 .contact-card:hover {
   transform: translateY(-4px);
 }
+
+.pulse {
+  animation-name: pulse-animation;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}

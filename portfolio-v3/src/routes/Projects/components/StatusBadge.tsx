@@ -32,7 +32,7 @@ export default function StatusBadge({
         <>
         {matchingStatus && (
             <div className="flex justify-start items-center gap-2">
-                <div className={`w-[8px] aspect-square rounded-full ${matchingStatus.color}`}></div>
+                <div className={`pulse w-[8px] aspect-square rounded-full ${matchingStatus.color}`}></div>
                 <p className="text-[12px] text-secondary">{matchingStatus.status}</p>
             </div>
         )}
