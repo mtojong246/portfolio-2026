@@ -1,4 +1,6 @@
 
+export type Status = "Complete" | "Ongoing" | "On hold"
+
 export interface ProjectType {
     id: string;
     title: string;
@@ -7,6 +9,7 @@ export interface ProjectType {
     client: string;
     githubLink?: string;
     siteLink?: string;
+    status: Status;
 }
 
 export const projects: ProjectType[] = [
@@ -22,6 +25,7 @@ export const projects: ProjectType[] = [
         ],
         size: "big",
         client: "CPI",
+        status: "Ongoing",
     },
     {
         id: "eTEhsi2nCk",
@@ -33,6 +37,7 @@ export const projects: ProjectType[] = [
         ],
         size: "",
         client: "CPI",
+        status: "Complete",
     },
     {
         id: "NnuuwihwLC",
@@ -44,6 +49,7 @@ export const projects: ProjectType[] = [
         ],
         size: "",
         client: "myPABox",
+        status: "Complete",
     },
     {
         id: "8fvEURi38H",
@@ -57,6 +63,7 @@ export const projects: ProjectType[] = [
         ],
         size: "big",
         client: "CPI",
+        status: "Ongoing",
     },
     {
         id: "zLHTA6jUuT",
@@ -70,6 +77,7 @@ export const projects: ProjectType[] = [
         ],
         size: "",
         client: "myPABox",
+        status: "Ongoing",
     },
     {
         id: "CIz10HUFip",
@@ -83,6 +91,7 @@ export const projects: ProjectType[] = [
         ],
         size: "",
         client: "Lifestyle Medly LLC",
+        status: "Complete",
     },
     {
         id: "RlG9GlmbjD",
@@ -94,6 +103,7 @@ export const projects: ProjectType[] = [
         ],
         size: "",
         client: "Renew Aesthetics LLC",
+        status: "Complete",
     },
 ]
 

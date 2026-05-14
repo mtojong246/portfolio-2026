@@ -4,7 +4,7 @@ import { projects, ProjectType } from "../../../projects";
 import BackButton from "../../../components/Buttons/BackButton";
 import { ReactComponent as LinkIcon } from '../../../assets/icons/Link.svg';
 import { ReactComponent as GithubIcon } from '../../../assets/icons/Github.svg';
-import Button from "../../../components/Buttons/Button";
+import StatusBadge from "../components/StatusBadge";
 
 interface ProjectLink {
     label: string,
@@ -59,7 +59,9 @@ export default function Project() {
             {project && (
             <div className="w-full p-[64px]">
                 <div className="max-w-[1200px] mx-auto flex flex-col justify-start item-start">
+                    {/* Title section */}
                     <div className="flex flex-col justify-start items-start gap-6 max-w-[600px] mb-[48px]">
+                        <StatusBadge status={project.status}/>
                         <h1 className="text-white font-bold text-[40px]">{project.title}</h1>
                         {projectLinks.length > 0 && (
                             <div className="flex justify-start items-center gap-4">
@@ -76,7 +78,10 @@ export default function Project() {
                         )}
                         <p className="text-white">Lorem ipsum dolor sit amet consectetur. Amet faucibus malesuada enim justo aliquam eget. Donec dui morbi non amet. Vitae elementum fermentum vitae viverra morbi. Metus auctor massa tristique nulla hac enim etiam sed.</p>
                     </div>
-
+                    {/* Image/gallery */}
+                    <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden">
+                        <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"  className="object-cover h-full w-full"/>
+                    </div>
                 </div>
             </div>
             )}
