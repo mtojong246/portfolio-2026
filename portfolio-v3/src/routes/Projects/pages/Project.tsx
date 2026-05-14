@@ -93,7 +93,7 @@ export default function Project() {
                                 })}
                             </div>
                         )}
-                        <p className="text-white">Lorem ipsum dolor sit amet consectetur. Amet faucibus malesuada enim justo aliquam eget. Donec dui morbi non amet. Vitae elementum fermentum vitae viverra morbi. Metus auctor massa tristique nulla hac enim etiam sed.</p>
+                        <p className="text-white">{project.description}</p>
                     </div>
                     {/* Image/gallery */}
                     <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden mb-[64px]">
@@ -102,7 +102,15 @@ export default function Project() {
                     {/* Case study */}
                     <div className="w-full flex justify-start items-start gap-[64px]">
                         {/* Content */}
-                        <div className="w-full flex flex-col justify-start items-start max-w-[600px] gap-[64px]"></div>
+                        <div className="w-full flex flex-col justify-start items-start max-w-[600px] gap-[64px]">
+                            <p className="text-white">{project.introduction}</p>
+                            {project.caseStudy.length > 0 && project.caseStudy.map(section => (
+                                <div>
+                                    <h3 className="text-secondary font-bold text-[24px] mb-8">{section.title}</h3>
+                                    <p className="text-white">{section.content}</p>
+                                </div>
+                            ))}
+                        </div>
                         {/* Metadata */}
                         <div className="w-full max-w-[400px] flex flex-col justify-start items-start gap-8">
                             <MetadataComponent label="Client">
