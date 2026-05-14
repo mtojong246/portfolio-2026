@@ -42,7 +42,7 @@ export default function NavigationBar({
     
 
     return (
-        <div className={`w-full flex justify-between items-center px-[64px] ${isSticky ? 'sticky h-auto py-4' : 'absolute h-[120px] py-0'} top-0 left-0 right-0`}>
+        <div className={`w-full flex justify-between items-center px-[64px] ${isSticky ? 'sticky h-auto py-4' : 'absolute h-[120px] py-0'} top-0 left-0 right-0 z-[50]`}>
             <div className="grow flex justify-start">
                 {!isSticky && (
                     <p className="text-white text-[32px] font-bold">MT</p>

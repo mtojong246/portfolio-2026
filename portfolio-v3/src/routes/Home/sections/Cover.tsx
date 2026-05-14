@@ -34,8 +34,20 @@ const links: { icon: ReactNode, link: string }[] = [
 
 export default function Cover() {
     return (
-        <div className="w-full h-screen bg-dark px-[64px]">
-            <div className="flex flex-col justify-center items-center mx-auto h-full max-w-[1200px] relative">
+        <div className="w-full h-screen px-[64px] bg-dark relative">
+            <div className='cover absolute top-0 left-0 right-0 bottom-0'>
+                <div className='light x1'></div>
+                <div className='light x2'></div>
+                <div className='light x3'></div>
+                <div className='light x4'></div>
+                <div className='light x5'></div>
+                <div className='light x6'></div>
+                <div className='light x7'></div>
+                <div className='light x8'></div>
+                <div className='light x9'></div>
+            </div>
+            <div className='cover-fade absolute top-0 left-0 right-0 bottom-0 z-10'></div>
+            <div className="flex flex-col justify-center items-center mx-auto h-full max-w-[1200px] relative z-20">
                 <h1 className="text-white text-[96px] font-bold mb-3">MELANIE TOJONG</h1>
                 <h3 
                     className="cover-subtitle text-white text-[22px] font-medium mb-[64px]"
