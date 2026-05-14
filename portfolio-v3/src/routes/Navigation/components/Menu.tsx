@@ -40,7 +40,8 @@ export default function Menu({
     ]
 
     return (
-        <div id="mobile-menu" className={`fixed ${showMenu ? 'show' : ''} top-0 bottom-0 left-0 right-[20%] bg-white block md:hidden z-[100]`}>
+        <div id="mobile-menu" className={`fixed ${showMenu ? 'show' : ''} top-0 bottom-0 left-0 right-0 flex md:hidden z-[100] justify-start items-start`}>
+            <div className='w-[80%] shrink-0 h-full bg-white'>
             <div className="w-full px-6 sm:px-10 h-auto sm:h-[120px] py-4 sm:py-0 flex justify-start items-center">
                 <button onClick={toggleMenu} className='w-[56px] aspect-square rounded-full flex justify-center items-center bg-[#C7C7C8]/[0.3]'>
                     <div className="w-[24px]"><CloseIcon /></div>
@@ -54,6 +55,8 @@ export default function Menu({
                     )
                 })}
             </div>
+            </div>
+            <button onClick={toggleMenu} className='grow h-full'></button>
         </div>
     )
 }
