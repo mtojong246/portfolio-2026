@@ -1,4 +1,3 @@
-import { generateRandomString } from "./utils";
 
 export interface ProjectType {
     id: string;
@@ -12,7 +11,7 @@ export interface ProjectType {
 
 export const projects: ProjectType[] = [
     {
-        id: generateRandomString(),
+        id: "wHipWRWbPH",
         title: "AI Report Generation Tool",
         tech: [
             "Typescript",
@@ -25,7 +24,7 @@ export const projects: ProjectType[] = [
         client: "CPI",
     },
     {
-        id: generateRandomString(),
+        id: "eTEhsi2nCk",
         title: "CPI Business Website",
         tech: [
             "Squarespace",
@@ -36,7 +35,7 @@ export const projects: ProjectType[] = [
         client: "CPI",
     },
     {
-        id: generateRandomString(),
+        id: "NnuuwihwLC",
         title: "Admin Dashboard",
         tech: [
             "Typescript",
@@ -47,7 +46,7 @@ export const projects: ProjectType[] = [
         client: "myPABox",
     },
     {
-        id: generateRandomString(),
+        id: "8fvEURi38H",
         title: "ML Training & Prediction Platform",
         tech: [
             "Typescript",
@@ -60,7 +59,7 @@ export const projects: ProjectType[] = [
         client: "CPI",
     },
     {
-        id: generateRandomString(),
+        id: "zLHTA6jUuT",
         title: "myPABox v2",
         tech: [
             "Typescript",
@@ -73,7 +72,7 @@ export const projects: ProjectType[] = [
         client: "myPABox",
     },
     {
-        id: generateRandomString(),
+        id: "CIz10HUFip",
         title: "Lifestyle Medly",
         tech: [
             "Typescript",
@@ -86,7 +85,7 @@ export const projects: ProjectType[] = [
         client: "Lifestyle Medly LLC",
     },
     {
-        id: generateRandomString(),
+        id: "RlG9GlmbjD",
         title: "Renew Aeshetics",
         tech: [
             "Squarespace",

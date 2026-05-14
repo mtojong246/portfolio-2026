@@ -23,6 +23,9 @@ export default function Button({
                 <IconComponent icon={icon}/>
             )}
             <div className="px-4"><p>{label}</p></div>
+            {dir === 'right' && (
+                <IconComponent icon={icon}/>
+            )}
         </button>
     )
 }

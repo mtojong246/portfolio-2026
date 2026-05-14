@@ -1,6 +1,8 @@
+import { MouseEvent } from "react";
 import SectionHeader from "../../../components/SectionHeader";
 import { motion, AnimatePresence } from 'motion/react';
 import { projects, ProjectType } from "../../../projects";
+import { useNavigate } from "react-router";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
@@ -11,13 +13,16 @@ const cardVariants = {
 
 const WorkCard = ({
     workInfo,
+    navigateToProject,
 }: {
     workInfo: ProjectType,
+    navigateToProject: (e: MouseEvent<HTMLButtonElement>, id: string) => void,
 }) => {
-    const { size, title, tech } = workInfo;
+    const { size, title, tech, id } = workInfo;
 
     return (
         <motion.button
+            onClick={(e:any) => navigateToProject(e, id)}
             key={title} 
             layout 
             variants={cardVariants}
@@ -40,6 +45,12 @@ const WorkCard = ({
 }
 
 export default function Work() {
+    const navigate = useNavigate();
+
+    const navigateToProject = (e: MouseEvent<HTMLButtonElement>, id: string) => {
+        e.preventDefault();
+        navigate(`/projects/${id}`);
+    } 
 
     return (
         <div id="work" className="w-full bg-dark px-[64px] py-[100px]">
@@ -52,7 +63,7 @@ export default function Work() {
                     <motion.div className="work-grid w-full" layout>
                         <AnimatePresence mode="popLayout">
                         {projects.map(project => (
-                            <WorkCard workInfo={project}/>
+                            <WorkCard workInfo={project} navigateToProject={navigateToProject}/>
                         ))}
                         </AnimatePresence>
                     </motion.div>

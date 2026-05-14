@@ -31,12 +31,17 @@ const links: { icon: ReactNode, link: string }[] = [
     }
 ]
 
+
 export default function Cover() {
     return (
         <div className="w-full h-screen bg-dark px-[64px]">
-            <div className="flex flex-col justify-center items-center mx-auto h-full max-w-[1200px]">
+            <div className="flex flex-col justify-center items-center mx-auto h-full max-w-[1200px] relative">
                 <h1 className="text-white text-[96px] font-bold mb-3">MELANIE TOJONG</h1>
-                <h3 className="text-white text-[22px] font-medium mb-[64px]">SOFTWARE ENGINEER, FRONTEND DEVELOPER & DESIGNER</h3>
+                <h3 
+                    className="cover-subtitle text-white text-[22px] font-medium mb-[64px]"
+                >
+                    SOFTWARE ENGINEER, FRONTEND DEVELOPER & DESIGNER
+                </h3>
                 <div className='flex justify-center items-center gap-6'>
                     {links.map(iconLink => {
                         const { icon, link } = iconLink;
@@ -46,7 +51,13 @@ export default function Cover() {
                         )
                     })}
                 </div>
+                <div className="scroll-down">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+            
         </div>
     )
 }
