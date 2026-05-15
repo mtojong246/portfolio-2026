@@ -20,6 +20,7 @@ const loadTagCanvas = () => {
       noMouse: true,
       initial: [0.3, -0.1],
       wheelZoom: false,
+      shape: 'vcylinder',
     });
   } catch(err:any) {
     console.log(err);
@@ -46,7 +47,7 @@ export default function Home({
         const resizeObserver = new ResizeObserver(() => {
             if (!canvas || !container) return;
             canvas.width = container.clientWidth;
-            canvas.height = container.clientWidth;
+            canvas.height = container.clientHeight;
             (window as any).TagCanvas.Update("skillsCanvas");
         });
 
