@@ -4,12 +4,13 @@ import { motion, AnimatePresence } from 'motion/react';
 import { projects, ProjectType } from "../../../projects";
 import { useNavigate } from "react-router";
 
+const placeholderLink = "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png";
+
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
   visible: { opacity: 1, scale: 1, y: 0 },
   exit: { opacity: 0, scale: 0.95, y: -10 },
 };
-
 
 const WorkCard = ({
     workInfo,
@@ -18,7 +19,13 @@ const WorkCard = ({
     workInfo: ProjectType,
     navigateToProject: (e: MouseEvent<HTMLButtonElement>, id: string) => void,
 }) => {
-    const { size, title, tech, id } = workInfo;
+    const { 
+        size,
+        title,
+        tech,
+        id,
+        previewImg, 
+    } = workInfo;
 
     return (
         <motion.button
@@ -33,7 +40,11 @@ const WorkCard = ({
             className={`${size} work-card flex flex-col justify-start items-stretch rounded-[16px] border border-outline overflow-hidden`}
         >
             <div className="grow w-full bg-light overflow-hidden">
-                <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"  className="object-cover h-full"/>
+                <img
+                    alt={`${title} preview`}
+                    src={previewImg ?? placeholderLink} 
+                    className="object-cover h-full"
+                />
             </div>
             <div className="w-full flex flex-col justify-start items-start gap-2 p-6 shrink-0 relative">
                 <p className="text-white font-semibold">{title}</p>

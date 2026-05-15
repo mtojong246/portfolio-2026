@@ -268,7 +268,7 @@
 }
 
 .timeline .timeline-item {
-  padding: 10px 24px;
+  /* padding: 10px 24px; */
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -292,11 +292,15 @@
 }
 
 .timeline .timeline-item.left {
+  padding-right: 24px;
+  padding-left: 0px;
   left: 0;
   transform: translateX(-24px) translateY(10px);
 }
 
 .timeline .timeline-item.right {
+  padding-right: 0px;
+  padding-left: 24px;
   left: 50%;
   transform: translateX(24px) translateY(10px);
 }

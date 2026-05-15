@@ -43,13 +43,13 @@ const TimelineContainer = ({
                     </div>
                 </div>
                 {/* Bottom section */}
-                <div className="w-full flex flex-col justify-start items-stretch gap-4 py-6">
+                <div className="w-full flex flex-col-reverse justify-start items-stretch gap-4 pt-4 pb-6">
                     <div className="flex flex-wrap justify-start items-start gap-2">
                         {skills.map(skill => (
                             <div className="px-[12px] py-[2px] text-[14px] text-black bg-accent-secondary rounded-xl">{skill}</div>
                         ))}
                     </div>
-                    <p className="text-white">{description}</p>
+                    <p className="text-white text-[14px] font-light">{description}</p>
                 </div>
             </div>
         </div>
@@ -69,9 +69,21 @@ const experiences: ExperienceInfo[] = [
             "Python",
             "FastAPI",
             "TailwindCSS",
-            "Bootstrap",
+            "Langchain",
+            "AWS Bedrock",
+            "Airflow",
+            "Docker"
         ],
-        description: "Lorem ipsum dolor sit amet consectetur. Augue sed cras mi posuere quis sagittis convallis cras.",
+        description: (
+            `Built and delivered an LLM-driven document generation platform \
+            that transforms unstructured PDF and DOCX data into professional \
+            regulatory reports in minutes using Python, LangChain, and AWS Bedrock. \
+            Directed a complete UX/UI redesign and frontend redevelopment of the \
+            company's ML software suite in React and TypeScript, collaborating \
+            with cross-functional teams and external clients to improve usability \
+            and integrate data visualization tools. Supported lead generation through \
+            website redesigns, live demos, and purpose-built demo sites with email capture.`
+        ),
     },
     {
         positionTitle: "Fullstack Software Developer",
@@ -86,7 +98,14 @@ const experiences: ExperienceInfo[] = [
             "OpenAI API",
             "TailwindCSS",
         ],
-        description: "Lorem ipsum dolor sit amet consectetur. Augue sed cras mi posuere quis sagittis convallis cras.",
+        description: (
+            `Led full stack development of myPABox v2, translating Figma \
+            mockups into production-ready React components while building \
+            and maintaining a Firebase backend for user authentication and data storage. \
+            Integrated the OpenAI API to auto-generate personalized application essays \
+            from structured user data and independently architected an internal admin \
+            dashboard to streamline data entry and validation workflows.`
+        )
     },
     {
         positionTitle: "Freelance Developer",
@@ -103,7 +122,13 @@ const experiences: ExperienceInfo[] = [
             "Squarespace",
             "Wix",
         ],
-        description: "Lorem ipsum dolor sit amet consectetur. Augue sed cras mi posuere quis sagittis convallis cras.",
+        description: (
+            `Designed and developed custom websites for clients across multiple industries, \
+            leveraging various CMS platforms to deliver tailored digital experiences aligned \
+            with each client's brand and goals. Independently managed the full project \
+            lifecycle — from concept through launch — maintaining direct client relationships \
+            and incorporating iterative feedback to ensure on-schedule delivery.`
+        )
     },
 ]
 

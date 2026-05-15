@@ -1,4 +1,8 @@
 
+import MLPreview from './assets/images/MLPreview.png';
+import myPABoxPreview from './assets/images/mypabox-preview.png';
+import AdminPreview from './assets/images/mypaboxadmin-preview.png';
+
 export type Status = "Complete" | "Ongoing" | "On hold"
 
 const SHORT_PARAGRAPH = "Lorem ipsum dolor sit amet consectetur. Amet faucibus malesuada enim justo aliquam eget. Donec dui morbi non amet. Vitae elementum fermentum vitae viverra morbi. Metus auctor massa tristique nulla hac enim etiam sed."
@@ -15,6 +19,7 @@ export interface ProjectType {
     siteLink?: string;
     status: Status;
     description: string;
+    previewImg?: string;
     introduction: string;
     caseStudy: { title: string; content: string }[];
 }
@@ -63,17 +68,20 @@ export const projects: ProjectType[] = [
         ],
     },
     {
-        id: "NnuuwihwLC",
-        title: "Admin Dashboard",
+        id: "zLHTA6jUuT",
+        title: "myPABox v2",
         tech: [
             "Typescript",
             "React",
+            "TailwindCSS",
+            "MUI",
             "Firebase",
         ],
         size: "",
         client: "myPABox",
-        status: "Complete",
+        status: "Ongoing",
         description: SHORT_PARAGRAPH,
+        previewImg: myPABoxPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
             {
@@ -96,6 +104,7 @@ export const projects: ProjectType[] = [
         client: "CPI",
         status: "Ongoing",
         description: SHORT_PARAGRAPH,
+        previewImg: MLPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
             {
@@ -105,19 +114,18 @@ export const projects: ProjectType[] = [
         ],
     },
     {
-        id: "zLHTA6jUuT",
-        title: "myPABox v2",
+        id: "NnuuwihwLC",
+        title: "Admin Dashboard",
         tech: [
             "Typescript",
             "React",
-            "TailwindCSS",
-            "MUI",
             "Firebase",
         ],
         size: "",
         client: "myPABox",
-        status: "Ongoing",
+        status: "Complete",
         description: SHORT_PARAGRAPH,
+        previewImg: AdminPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
             {
