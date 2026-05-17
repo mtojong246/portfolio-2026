@@ -2,6 +2,11 @@
 import MLPreview from './assets/images/MLPreview.png';
 import myPABoxPreview from './assets/images/mypabox-preview.png';
 import AdminPreview from './assets/images/mypaboxadmin-preview.png';
+import MegascribePreview from './assets/images/MegascribePreview.png';
+import CPIPreview from './assets/images/cpi-website-preview.png';
+import LifestyleMedlyPreview from './assets/images/lifestyle-medly-preview.png';
+import EventsPreview from './assets/images/events-preview.png';
+import RenewPreview from './assets/images/renew-preview.png';
 
 export type Status = "Complete" | "Ongoing" | "On hold"
 
@@ -39,6 +44,7 @@ export const projects: ProjectType[] = [
         client: "CPI",
         status: "Ongoing",
         description: SHORT_PARAGRAPH,
+        previewImg: MegascribePreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
             {
@@ -59,6 +65,7 @@ export const projects: ProjectType[] = [
         client: "CPI",
         status: "Complete",
         description: SHORT_PARAGRAPH,
+        previewImg: CPIPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
             {
@@ -148,6 +155,28 @@ export const projects: ProjectType[] = [
         client: "Lifestyle Medly LLC",
         status: "Complete",
         description: SHORT_PARAGRAPH,
+        previewImg: LifestyleMedlyPreview,
+        introduction: SHORT_PARAGRAPH,
+        caseStudy: [
+            {
+                title: SECTION_TITLE,
+                content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
+            }
+        ],
+    },
+    {
+        id: "qdLlkyOZjQ",
+        title: "Events by Ansa",
+        tech: [
+            "Wix Studio",
+            "Vanilla JS",
+            "CSS",
+        ],
+        size: "",
+        client: "Events by Ansa",
+        status: "Complete",
+        description: SHORT_PARAGRAPH,
+        previewImg: EventsPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
             {
@@ -168,6 +197,7 @@ export const projects: ProjectType[] = [
         client: "Renew Aesthetics LLC",
         status: "Complete",
         description: SHORT_PARAGRAPH,
+        previewImg: RenewPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
             {

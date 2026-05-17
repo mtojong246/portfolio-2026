@@ -1,7 +1,6 @@
 import { MouseEvent } from 'react';
 import { useNavigate } from 'react-router';
 import { ReactComponent as DownloadIcon } from '../../../assets/icons/Download.svg';
-import Button from '../../../components/Buttons/Button';
 import MenuButton from '../../../components/Buttons/MenuButton';
 
 const scrollToSection = (id: string) => {
@@ -60,12 +59,16 @@ export default function NavigationBar({
                 })}
             </div>
             <div className="w-[100px] flex justify-end">
-                <Button 
-                    label='resume'
-                    icon={<DownloadIcon />}
-                    dir='left'
-                    action={(e:any) => {}}
-                />
+                <a
+                    href="/Melanie Tojong Resume 2026.pdf"
+                    download
+                    target="_blank"
+                    rel="noreferrer"
+                    className="pulse-btn text-accent text-[14px] px-4 w-auto flex justify-center items-center h-[45px] relative w-full"
+                >
+                    <div className="w-[20px]"><DownloadIcon /></div>
+                    <p className="pl-3">resume</p>
+                </a>
             </div>
         </div>
     )

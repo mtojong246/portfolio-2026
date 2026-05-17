@@ -1,4 +1,3 @@
-import Button from "../../../components/Buttons/Button";
 import SectionHeader from "../../../components/SectionHeader";
 import { ReactComponent as DownloadIcon } from '../../../assets/icons/Download.svg';
 import Timeline from "../components/Timeline";
@@ -13,12 +12,16 @@ export default function Experience() {
                             title="Experience"
                             subtitle="Where I've Worked"
                         />
-                        <Button 
-                            label="Download Resume"
-                            dir="right"
-                            icon={<DownloadIcon />}
-                            action={(e:any) => {}}
-                        />
+                        <a
+                            href="/Melanie Tojong Resume 2026.pdf"
+                            download
+                            target="_blank"
+                            rel="noreferrer"
+                            className="pulse-btn text-accent text-[14px] px-4 w-auto flex justify-center items-center h-[45px] relative w-full"
+                        >
+                            <div className="w-[20px]"><DownloadIcon /></div>
+                            <p className="pl-3">Download Resume</p>
+                        </a>
                     </div>
                     <Timeline />
                 </div>
