@@ -76,7 +76,6 @@ export default function Contact() {
                             <p className="mb-[32px] text-white">
                                 Lorem ipsum dolor sit amet consectetur. Quis quis vitae pretium pharetra. 
                             </p>
-                            <button className="mb-[64px] text-[18px] font-semibold text-white">mtojong@gmail.com</button>
                             <div className="w-full contact-grid">
                                 {contacts.map(contact => (
                                     <ContactCard contactInfo={contact}/>

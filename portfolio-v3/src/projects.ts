@@ -43,7 +43,11 @@ export const projects: ProjectType[] = [
         size: "big",
         client: "CPI",
         status: "Ongoing",
-        description: SHORT_PARAGRAPH,
+        description: (
+            `An LLM-driven tool that transforms unstructured text, image, \
+            and tabular data into well-defined regulatory report documents \
+            in minutes. `
+        ),
         previewImg: MegascribePreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
@@ -64,7 +68,7 @@ export const projects: ProjectType[] = [
         size: "",
         client: "CPI",
         status: "Complete",
-        description: SHORT_PARAGRAPH,
+        description: "A modern redesign of CPI’s business website.",
         previewImg: CPIPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
@@ -87,7 +91,9 @@ export const projects: ProjectType[] = [
         size: "",
         client: "myPABox",
         status: "Ongoing",
-        description: SHORT_PARAGRAPH,
+        description: (
+            `A comprehensive Physician Assistant program requirement tracking and organization tool.`
+        ),
         previewImg: myPABoxPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
@@ -110,7 +116,11 @@ export const projects: ProjectType[] = [
         size: "big",
         client: "CPI",
         status: "Ongoing",
-        description: SHORT_PARAGRAPH,
+        description: (
+            `An all-in-one platform for training, validating, and generating \
+            predictions from 16 different machine learning algorithms in minutes, \
+            complete with data curation, visualization, and read-across capabilities.`
+        ),
         previewImg: MLPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
@@ -131,7 +141,10 @@ export const projects: ProjectType[] = [
         size: "",
         client: "myPABox",
         status: "Complete",
-        description: SHORT_PARAGRAPH,
+        description: (
+            `An internal admin dashboard that centralizes Physician Assistant program \
+            and application data entry and validation workflows for myPAbox.`
+        ),
         previewImg: AdminPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [
@@ -154,7 +167,11 @@ export const projects: ProjectType[] = [
         size: "",
         client: "Lifestyle Medly LLC",
         status: "Complete",
-        description: SHORT_PARAGRAPH,
+        description: (
+            `A custom business website built for Lifestyle Medly that enables users to explore \
+            weight loss programs, book appointmenets and self-screen for eligibility through an \
+            integrated questionnaire.`
+        ),
         previewImg: LifestyleMedlyPreview,
         introduction: SHORT_PARAGRAPH,
         caseStudy: [

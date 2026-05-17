@@ -1,10 +1,10 @@
 import { ReactNode, useMemo, MouseEvent } from "react"
 import { ProjectType } from "../../../projects"
-import { useNavigate } from "react-router";
 import { ReactComponent as ArrowRight } from '../../../assets/icons/Arrow-Right.svg';
 import { ReactComponent as ArrowLeft } from '../../../assets/icons/Arrow-Left.svg';
 import { motion } from 'motion/react';
 import { generateRandomString } from "../../../utils";
+import useNav from "../../../useNav";
 
 const ArrowButton = ({
     icon,
@@ -27,7 +27,7 @@ export default function NextProjectBox({
     projects: ProjectType[],
     currentProject: ProjectType | null,
 }) {
-    const navigate = useNavigate();
+    const { navigateToRoute } = useNav();
     
     const nextProject: ProjectType | null = useMemo(() => {
         if (currentProject) {
@@ -59,13 +59,13 @@ export default function NextProjectBox({
 
     const goToNextProject = (e: MouseEvent<HTMLButtonElement>) => {
         if (nextProject) {
-            navigate(`/projects/${nextProject.id}`)
+            navigateToRoute(`/projects/${nextProject.id}`);
         } 
     };
 
     const goToPrevProject = (e: MouseEvent<HTMLButtonElement>) => {
         if (previousProject) {
-            navigate(`/projects/${previousProject.id}`)
+            navigateToRoute(`/projects/${previousProject.id}`)
         }
     }
 

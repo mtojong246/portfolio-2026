@@ -2,9 +2,8 @@ import { MouseEvent } from "react";
 import SectionHeader from "../../../components/SectionHeader";
 import { motion, AnimatePresence } from 'motion/react';
 import { projects, ProjectType } from "../../../projects";
-import { useNavigate } from "react-router";
-
-const placeholderLink = "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png";
+import useNav from "../../../useNav";
+import { PLACEHOLDER_LINK } from "../../../constants";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
@@ -42,7 +41,7 @@ const WorkCard = ({
             <div className="grow w-full bg-light overflow-hidden">
                 <img
                     alt={`${title} preview`}
-                    src={previewImg ?? placeholderLink} 
+                    src={previewImg ?? PLACEHOLDER_LINK} 
                     className="object-cover h-full"
                 />
             </div>
@@ -56,11 +55,11 @@ const WorkCard = ({
 }
 
 export default function Work() {
-    const navigate = useNavigate();
+    const { navigateToRoute } = useNav();
 
     const navigateToProject = (e: MouseEvent<HTMLButtonElement>, id: string) => {
         e.preventDefault();
-        navigate(`/projects/${id}`);
+        navigateToRoute(`/projects/${id}`);
     } 
 
     return (

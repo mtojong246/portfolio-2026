@@ -7,6 +7,7 @@ import { ReactComponent as GithubIcon } from '../../../assets/icons/Github.svg';
 import StatusBadge from "../components/StatusBadge";
 import { motion, AnimatePresence } from 'motion/react';
 import NextProjectBox from "../components/NextProjectBox";
+import { PLACEHOLDER_LINK } from "../../../constants";
 
 interface ProjectLink {
     label: string,
@@ -34,10 +35,6 @@ const MetadataComponent = ({
 export default function Project() {
     const { id } = useParams();
     const [ project, setProject ] = useState<ProjectType | null>(null);
-
-    useEffect(() => {
-        window.scrollTo(0,0);
-    },[])
 
     useEffect(() => {
         if (id) {
@@ -116,7 +113,11 @@ export default function Project() {
                     </div>
                     {/* Image/gallery */}
                     <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden mb-[64px]">
-                        <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"  className="object-cover h-full w-full"/>
+                        <img 
+                            alt={`${project.title} Preview`}
+                            src={project.previewImg ?? PLACEHOLDER_LINK}
+                            className="object-cover h-full w-full"
+                        />
                     </div>
                     {/* Case study */}
                     <div className="w-full flex flex-col-reverse sm:flex-row justify-start items-start gap-[64px]">
