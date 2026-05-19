@@ -1,4 +1,8 @@
 
+:root {
+  --primary-font-family: "Sora", sans-serif;
+  --secondary-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 .glass {
     /* From https://css.glass */
@@ -445,3 +449,26 @@
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
+
+/* .case-study-component h2,
+.case-study-component h3,
+.case-study-component h4 {
+  color: #C7C7C8;
+} */
+
+.case-study-component h3 {
+  font-family: var(--secondary-font-family);
+  font-size: 18px;
+}
+
+.case-study-component h2 {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.case-study-component h4 {
+  font-weight: 600;
+  color: #C7C7C8;
+}
+

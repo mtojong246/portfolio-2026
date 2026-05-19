@@ -24,6 +24,7 @@ const WorkCard = ({
         tech,
         id,
         previewImg, 
+        detailsType,
     } = workInfo;
 
     return (
@@ -48,7 +49,7 @@ const WorkCard = ({
             <div className="w-full flex flex-col justify-start items-start gap-2 p-6 shrink-0 relative">
                 <p className="text-white font-semibold">{title}</p>
                 <p className="subtitle-default text-secondary text-[12px] text-left">{tech.join(' / ')}</p>
-                <p className="subtitle-hover text-accent text-[12px] text-left">Show Project →</p>
+                <p className="subtitle-hover text-accent text-[12px] text-left">Show {detailsType === 'case-study' ? 'Case Study' : 'Project'} →</p>
             </div>
         </motion.button>
     )

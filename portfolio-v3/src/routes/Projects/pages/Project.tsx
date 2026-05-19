@@ -4,6 +4,7 @@ import { projects, ProjectType } from "../../../projects";
 import BackButton from "../../../components/Buttons/BackButton";
 import { ReactComponent as LinkIcon } from '../../../assets/icons/Link.svg';
 import { ReactComponent as GithubIcon } from '../../../assets/icons/Github.svg';
+import { ReactComponent as InfoIcon } from '../../../assets/icons/InformationCircle.svg';
 import StatusBadge from "../components/StatusBadge";
 import { motion, AnimatePresence } from 'motion/react';
 import NextProjectBox from "../components/NextProjectBox";
@@ -13,6 +14,12 @@ interface ProjectLink {
     label: string,
     icon: ReactNode,
     link: string,
+}
+
+const PlaceholderComponent = () => {
+    return (
+        <></>
+    )
 }
 
 const MetadataComponent = ({
@@ -70,6 +77,7 @@ export default function Project() {
         return links;
     }, [project]);
 
+    const Child = project ? project.caseStudyComponent : PlaceholderComponent;
     
     return (
         <AnimatePresence>
@@ -79,7 +87,7 @@ export default function Project() {
             </div>
             {project && (
             <div className="w-full p-6 sm:p-10">
-                <div className="max-w-[1200px] mx-auto flex flex-col justify-start item-start">
+                <div className="max-w-[1200px] mx-auto flex flex-col justify-start items-center">
                     {/* Title section */}
                     <div className="flex flex-col justify-start items-start gap-[48px] max-w-[600px]">   
                         <motion.div 
@@ -95,21 +103,33 @@ export default function Project() {
                             >
                                 {project.title}
                             </h1>
-                            {projectLinks.length > 0 && (
+                            {projectLinks.length > 0 ? (
                                 <div className="flex justify-start items-center gap-4">
                                     {projectLinks.map(projectLink => {
                                         const { label, icon, link } = projectLink;
                                         return (
-                                            <a href={link} className="flex justify-center items-center text-accent gap-4">
-                                            <p>{label}</p>
-                                            <div className="w-[24px]">{icon}</div>
+                                            <a href={link} className="flex justify-center items-center text-accent gap-2 hover:brightness-[0.8] transition-all">
+                                                <div className="w-[20px]">{icon}</div>
+                                                <p>{label}</p>
                                             </a>
                                         )
                                     })}
                                 </div>
+                            ) : (
+                                <div className="flex justify-center items-center gap-2 text-secondary">
+                                    <div className="w-[20px]"><InfoIcon /></div>
+                                    <p>Demo available upon request</p>
+                                </div>
                             )}
                         </motion.div>
                         <p className="text-white">{project.description}</p>
+                        <MetadataComponent label="Tech">
+                            <div className="w-full flex flex-wrap gap-2 justify-start items-start">
+                                {project.tech.map(tech => (
+                                    <div className="px-[12px] py-[2px] text-[14px] text-black bg-accent-secondary rounded-xl">{tech}</div>
+                                ))}
+                            </div>
+                        </MetadataComponent>
                     </div>
                     {/* Image/gallery */}
                     <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden mb-[64px]">
@@ -119,31 +139,9 @@ export default function Project() {
                             className="object-cover h-full w-full"
                         />
                     </div>
-                    {/* Case study */}
-                    <div className="w-full flex flex-col-reverse sm:flex-row justify-start items-start gap-[64px]">
-                        {/* Content */}
-                        <div className="w-full flex flex-col justify-start items-start max-w-[600px] gap-[64px]">
-                            <p className="text-white">{project.introduction}</p>
-                            {project.caseStudy.length > 0 && project.caseStudy.map(section => (
-                                <div>
-                                    <h3 className="text-secondary font-bold text-[24px] mb-8">{section.title}</h3>
-                                    <p className="text-white">{section.content}</p>
-                                </div>
-                            ))}
-                        </div>
-                        {/* Metadata */}
-                        <div className="w-full max-w-full sm:max-w-[400px] flex flex-col justify-start items-start gap-8">
-                            <MetadataComponent label="Client">
-                                <p className="text-white">{project.client}</p>
-                            </MetadataComponent>
-                            <MetadataComponent label="Tech">
-                                <div className="w-full flex flex-wrap gap-2 justify-start items-start">
-                                    {project.tech.map(tech => (
-                                        <div className="px-[12px] py-[2px] text-[14px] text-black bg-accent-secondary rounded-xl">{tech}</div>
-                                    ))}
-                                </div>
-                            </MetadataComponent>
-                        </div>
+                    {/* Case study / Showcase */}
+                    <div className="case-study-component flex flex-col justify-start items-start gap-6 w-full max-w-[600px] text-white">
+                        <Child />
                     </div>
                 </div>
             </div>

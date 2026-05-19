@@ -8,6 +8,16 @@ import LifestyleMedlyPreview from './assets/images/lifestyle-medly-preview.png';
 import EventsPreview from './assets/images/events-preview.png';
 import RenewPreview from './assets/images/renew-preview.png';
 
+import AIReportingTool from './routes/Projects/sections/AIReportingTool';
+import React from 'react';
+import CPIWebsite from './routes/Projects/sections/CPIWebsite';
+import myPABoxV2 from './routes/Projects/sections/myPABoxV2';
+import MLPlatform from './routes/Projects/sections/MLPlatform';
+import AdminDashboard from './routes/Projects/sections/AdminDashboard';
+import LifestyleMedly from './routes/Projects/sections/LifestyleMedly';
+import EventsByAnsa from './routes/Projects/sections/EventsByAnsa';
+import Renew from './routes/Projects/sections/Renew';
+
 export type Status = "Complete" | "Ongoing" | "On hold"
 
 const SHORT_PARAGRAPH = "Lorem ipsum dolor sit amet consectetur. Amet faucibus malesuada enim justo aliquam eget. Donec dui morbi non amet. Vitae elementum fermentum vitae viverra morbi. Metus auctor massa tristique nulla hac enim etiam sed."
@@ -26,7 +36,9 @@ export interface ProjectType {
     description: string;
     previewImg?: string;
     introduction: string;
+    detailsType: "case-study" | "showcase";
     caseStudy: { title: string; content: string }[];
+    caseStudyComponent: React.ComponentType,
 }
 
 export const projects: ProjectType[] = [
@@ -50,12 +62,14 @@ export const projects: ProjectType[] = [
         ),
         previewImg: MegascribePreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "case-study",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: AIReportingTool,
     },
     {
         id: "eTEhsi2nCk",
@@ -65,18 +79,21 @@ export const projects: ProjectType[] = [
             "Vanilla JS",
             "CSS",
         ],
+        siteLink: "https://collaborations.com/",
         size: "",
         client: "CPI",
         status: "Complete",
         description: "A modern redesign of CPI’s business website.",
         previewImg: CPIPreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: CPIWebsite,
     },
     {
         id: "zLHTA6jUuT",
@@ -96,12 +113,14 @@ export const projects: ProjectType[] = [
         ),
         previewImg: myPABoxPreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: myPABoxV2,
     },
     {
         id: "8fvEURi38H",
@@ -123,12 +142,14 @@ export const projects: ProjectType[] = [
         ),
         previewImg: MLPreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: MLPlatform,
     },
     {
         id: "NnuuwihwLC",
@@ -147,12 +168,14 @@ export const projects: ProjectType[] = [
         ),
         previewImg: AdminPreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: AdminDashboard,
     },
     {
         id: "CIz10HUFip",
@@ -174,12 +197,14 @@ export const projects: ProjectType[] = [
         ),
         previewImg: LifestyleMedlyPreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: LifestyleMedly,
     },
     {
         id: "qdLlkyOZjQ",
@@ -195,12 +220,14 @@ export const projects: ProjectType[] = [
         description: SHORT_PARAGRAPH,
         previewImg: EventsPreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: EventsByAnsa,
     },
     {
         id: "RlG9GlmbjD",
@@ -216,12 +243,14 @@ export const projects: ProjectType[] = [
         description: SHORT_PARAGRAPH,
         previewImg: RenewPreview,
         introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
         caseStudy: [
             {
                 title: SECTION_TITLE,
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
+        caseStudyComponent: Renew,
     },
 ]
 
