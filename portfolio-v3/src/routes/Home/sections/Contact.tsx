@@ -3,8 +3,8 @@ import SectionHeader from "../../../components/SectionHeader";
 import { ReactComponent as EmailIcon } from '../../../assets/icons/Email.svg';
 import { ReactComponent as LinkedinIcon } from '../../../assets/icons/Linkedin.svg';
 import { ReactComponent as GithubIcon } from '../../../assets/icons/Github.svg';
-import ContactForm from "../components/ContactForm";
 import { EMAIL_LINK, GITHUB_LINK, LINKEDIN_LINK } from "../../../constants";
+import ContactForm from "../components/ContactForm";
 
 interface ContactInfo {
     contactType: string;

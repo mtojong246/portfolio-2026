@@ -17,7 +17,7 @@ export default function Experience() {
                             download
                             target="_blank"
                             rel="noreferrer"
-                            className="pulse-btn text-accent text-[14px] px-4 w-auto flex justify-center items-center h-[45px] relative w-full"
+                            className="pulse-btn text-accent text-[14px] px-4 w-auto flex justify-center items-center h-[45px] relative"
                         >
                             <div className="w-[20px]"><DownloadIcon /></div>
                             <p className="pl-3">Download Resume</p>

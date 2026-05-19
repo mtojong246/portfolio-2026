@@ -8,7 +8,7 @@ export default function TextAreaInput({
 }: {
     label: string,
     id: string,
-    value: string,
+    value?: string,
     handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
 }) {
     return (
@@ -17,8 +17,9 @@ export default function TextAreaInput({
             <textarea
                 onChange={handleChange}
                 id={id}
+                name={id}
                 value={value}
-                className="w-full border border-outline bg-dark text-white rounded-lg px-4 py-3"
+                className="w-full border border-outline bg-dark text-white rounded-lg px-4 py-3 text-[14px]"
                 rows={5}
             />
         </div>
