@@ -11,8 +11,8 @@ export default function BackButton() {
     }
 
     return (
-        <button onClick={backToHome} className='w-[48px] aspect-square rounded-full flex justify-center items-center bg-light'>
-            <div className='w-[20px] text-white'><BackIcon /></div>
+        <button onClick={backToHome} className='w-[48px] aspect-square rounded-full flex justify-center items-center text-white hover:text-accent bg-light border border-light hover:border-accent transition-all'>
+            <div className='w-[20px]'><BackIcon /></div>
         </button>
     )
 }

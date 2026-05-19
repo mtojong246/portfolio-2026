@@ -9,6 +9,7 @@ import StatusBadge from "../components/StatusBadge";
 import { motion, AnimatePresence } from 'motion/react';
 import NextProjectBox from "../components/NextProjectBox";
 import { PLACEHOLDER_LINK } from "../../../constants";
+import TechStack from "../components/TechStack";
 
 interface ProjectLink {
     label: string,
@@ -89,7 +90,7 @@ export default function Project() {
             <div className="w-full p-6 sm:p-10">
                 <div className="max-w-[1200px] mx-auto flex flex-col justify-start items-center">
                     {/* Title section */}
-                    <div className="flex flex-col justify-start items-start gap-[48px] max-w-[600px]">   
+                    <div className="flex flex-col justify-start items-start gap-[48px] max-w-[600px] w-full">   
                         <motion.div 
                             key={id}
                             initial={{ opacity: 0, y: 8 }}
@@ -123,13 +124,14 @@ export default function Project() {
                             )}
                         </motion.div>
                         <p className="text-white">{project.description}</p>
-                        <MetadataComponent label="Tech">
+                        <TechStack techStack={project.techStack}/>
+                        {/* <MetadataComponent label="Tech">
                             <div className="w-full flex flex-wrap gap-2 justify-start items-start">
                                 {project.tech.map(tech => (
                                     <div className="px-[12px] py-[2px] text-[14px] text-black bg-accent-secondary rounded-xl">{tech}</div>
                                 ))}
                             </div>
-                        </MetadataComponent>
+                        </MetadataComponent> */}
                     </div>
                     {/* Image/gallery */}
                     <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden mb-[64px]">

@@ -24,10 +24,16 @@ const SHORT_PARAGRAPH = "Lorem ipsum dolor sit amet consectetur. Amet faucibus m
 const LONG_PARAGRAPH = "Lorem ipsum dolor sit amet consectetur. Platea vitae porttitor ut bibendum fusce id tortor amet libero. Ut non nec massa ornare vel eget facilisis id et. Duis pellentesque lorem nulla lacus. Felis ornare duis dapibus id. Suscipit pretium egestas ipsum nunc. Odio velit eget donec arcu odio neque diam cras vehicula. Mi ullamcorper sit egestas lorem at ipsum. Quisque in vel purus ut augue. Enim est lorem in diam maecenas volutpat. Ultrices lectus praesent sit et non fermentum. Etiam est morbi a pulvinar et mauris porta accumsan. Accumsan molestie sed est metus risus non risus potenti suspendisse. Bibendum imperdiet egestas duis pretium feugiat."
 const SECTION_TITLE = "Section Title"
 
+export interface Stack {
+    category: string;
+    stack: string[];
+}
+
 export interface ProjectType {
     id: string;
     title: string;
     tech: string[];
+    techStack: Stack[];
     size: string;
     client: string;
     githubLink?: string;
@@ -51,6 +57,42 @@ export const projects: ProjectType[] = [
             "React",
             "FastAPI",
             "Langchain",
+        ],
+        techStack: [
+            {
+                category: "Frontend",
+                stack: [
+                    "Typescript",
+                    "React",
+                    "TailwindCSS",
+                    "Tiptap/Prosemirror",
+                ]
+            },
+            {
+                category: "Backend",
+                stack: [
+                    "Python",
+                    "FastAPI",
+                    "S3",
+                    "Minio",
+                    "Postgres",
+                ]
+            },
+            {
+                category: "LLM",
+                stack: [
+                    "Langchain",
+                    "AWS Bedrock",
+                ]
+            },
+            {
+                category: "Tools",
+                stack: [
+                    "Docker",
+                    "Airflow",
+                    "Git",
+                ]
+            }
         ],
         size: "big",
         client: "CPI",
@@ -79,6 +121,7 @@ export const projects: ProjectType[] = [
             "Vanilla JS",
             "CSS",
         ],
+        techStack: [],
         siteLink: "https://collaborations.com/",
         size: "",
         client: "CPI",
@@ -105,6 +148,7 @@ export const projects: ProjectType[] = [
             "MUI",
             "Firebase",
         ],
+        techStack: [],
         size: "",
         client: "myPABox",
         status: "Ongoing",
@@ -132,6 +176,7 @@ export const projects: ProjectType[] = [
             "MUI",
             "Plotly",
         ],
+        techStack: [],
         size: "big",
         client: "CPI",
         status: "Ongoing",
@@ -159,6 +204,7 @@ export const projects: ProjectType[] = [
             "React",
             "Firebase",
         ],
+        techStack: [],
         size: "",
         client: "myPABox",
         status: "Complete",
@@ -187,6 +233,7 @@ export const projects: ProjectType[] = [
             "MUI",
             "Firebase",
         ],
+        techStack: [],
         size: "",
         client: "Lifestyle Medly LLC",
         status: "Complete",
@@ -214,6 +261,7 @@ export const projects: ProjectType[] = [
             "Vanilla JS",
             "CSS",
         ],
+        techStack: [],
         size: "",
         client: "Events by Ansa",
         status: "Complete",
@@ -237,6 +285,7 @@ export const projects: ProjectType[] = [
             "Vanilla JS",
             "CSS",
         ],
+        techStack: [],
         size: "",
         client: "Renew Aesthetics LLC",
         status: "Complete",
