@@ -273,6 +273,8 @@
 
 .timeline .timeline-item {
   /* padding: 10px 24px; */
+  padding-top: 12px;
+  padding-bottom: 12px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -323,7 +325,8 @@
     left: 31px;
   }
 
-  .timeline .timeline-item {
+  .timeline .timeline-item.left,
+  .timeline .timeline-item.right {
     width: 100%;
     padding-left: 70px;
     padding-right: 0px;

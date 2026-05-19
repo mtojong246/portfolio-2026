@@ -73,7 +73,7 @@ export default function Contact() {
                     />
                     <div className="w-full flex flex-col md:flex-row justify-start md:justify-between items-center md:items-start gap-[64px]">
                         <div className="w-full md:w-1/2 flex flex-col justify-start items-start">
-                            <p className="mb-[32px] text-white">
+                            <p className="mb-[32px] text-white font-light">
                                 {`Whether you have a project idea, an opportunity, or just want to say hello - my inbox is always open.\
                                 Reach out through any of the channels below or send me a message directly.`}
                             </p>
