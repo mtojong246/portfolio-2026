@@ -23,23 +23,6 @@ const PlaceholderComponent = () => {
     )
 }
 
-const MetadataComponent = ({
-    children,
-    label,
-}: {
-    children: ReactNode,
-    label: string,
-}) => {
-    return (
-        <div className="w-full">
-            <div className="w-full pb-1 border-b border-outline text-white font-semibold mb-3">
-                {label}
-            </div>
-            {children}
-        </div>
-    )
-}
-
 export default function Project() {
     const { id } = useParams();
     const [ project, setProject ] = useState<ProjectType | null>(null);
@@ -125,13 +108,6 @@ export default function Project() {
                         </motion.div>
                         <p className="text-white">{project.description}</p>
                         <TechStack techStack={project.techStack}/>
-                        {/* <MetadataComponent label="Tech">
-                            <div className="w-full flex flex-wrap gap-2 justify-start items-start">
-                                {project.tech.map(tech => (
-                                    <div className="px-[12px] py-[2px] text-[14px] text-black bg-accent-secondary rounded-xl">{tech}</div>
-                                ))}
-                            </div>
-                        </MetadataComponent> */}
                     </div>
                     {/* Image/gallery */}
                     <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden mb-[64px]">
@@ -142,7 +118,7 @@ export default function Project() {
                         />
                     </div>
                     {/* Case study / Showcase */}
-                    <div className="case-study-component flex flex-col justify-start items-start gap-6 w-full max-w-[600px] text-white">
+                    <div className="flex flex-col justify-start items-center gap-6 w-full text-white">
                         <Child />
                     </div>
                 </div>

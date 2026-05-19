@@ -65,6 +65,7 @@ export const projects: ProjectType[] = [
                     "Typescript",
                     "React",
                     "TailwindCSS",
+                    "MUI",
                     "Tiptap/Prosemirror",
                 ]
             },
@@ -91,6 +92,7 @@ export const projects: ProjectType[] = [
                     "Docker",
                     "Airflow",
                     "Git",
+                    "Figma",
                 ]
             }
         ],
@@ -121,7 +123,23 @@ export const projects: ProjectType[] = [
             "Vanilla JS",
             "CSS",
         ],
-        techStack: [],
+        techStack: [
+            {
+                category: "Frontend",
+                stack: [
+                    "Javascript",
+                    "HTML",
+                    "CSS",
+                ]
+            },
+            {
+                category: "Tools",
+                stack: [
+                    "Squarespace",
+                    "Figma",
+                ]
+            }
+        ],
         siteLink: "https://collaborations.com/",
         size: "",
         client: "CPI",
@@ -148,7 +166,37 @@ export const projects: ProjectType[] = [
             "MUI",
             "Firebase",
         ],
-        techStack: [],
+        techStack: [
+            {
+                category: "Frontend",
+                stack: [
+                    "Typescript",
+                    "React",
+                    "TailwindCSS",
+                    "MUI",
+                    "Redux Toolkit",
+                ],
+            },
+            {
+                category: "Backend",
+                stack: [
+                    "Firebase Authentication",
+                    "Realtime Database"
+                ]
+            },
+            {
+                category: "Tools",
+                stack: [
+                    "OpenAI API",
+                    "Stripe",
+                    "MUI X Charts",
+                    "Recharts",
+                    "React Quill",
+                    "Figma",
+                    "Git",
+                ]
+            }
+        ],
         size: "",
         client: "myPABox",
         status: "Ongoing",
@@ -176,7 +224,30 @@ export const projects: ProjectType[] = [
             "MUI",
             "Plotly",
         ],
-        techStack: [],
+        techStack: [
+            {
+                category: "Frontend",
+                stack: [
+                    "Typescript",
+                    "React",
+                    "TailwindCSS",
+                    "MUI",
+                ]
+            },
+            {
+                category: "Tools",
+                stack: [
+                    "Orval",
+                    "React Query",
+                    "Plotly.js",
+                    "RDKit.js",
+                    "React Flow",
+                    "React Virtuoso",
+                    "Figma",
+                    "Git",
+                ]
+            }
+        ],
         size: "big",
         client: "CPI",
         status: "Ongoing",
@@ -204,7 +275,32 @@ export const projects: ProjectType[] = [
             "React",
             "Firebase",
         ],
-        techStack: [],
+        techStack: [
+            {
+                category: "Frontend",
+                stack: [
+                    "Typescript",
+                    "React",
+                    "TailwindCSS",
+                    "MUI",
+                    "Redux Toolkit",
+                ]
+            },
+            {
+                category: "Backend",
+                stack: [
+                    "Firebase Authentication",
+                    "Realtime Database"
+                ]
+            },
+            {
+                category: "Tools",
+                stack: [
+                    "React Quill",
+                    "Git",
+                ]
+            }
+        ],
         size: "",
         client: "myPABox",
         status: "Complete",

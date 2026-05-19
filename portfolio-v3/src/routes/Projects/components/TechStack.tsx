@@ -8,7 +8,7 @@ export default function TechStack({
     return (
         <div className="w-full">
             <div className="w-full pb-1 border-b border-outline text-white font-semibold mb-3">
-                Tech Stack
+                My Tech Stack
             </div>
             <div className="w-full flex flex-col justify-start items-stretch gap-6">
             {techStack.map(t => {
