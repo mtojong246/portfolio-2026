@@ -17,6 +17,7 @@ export default function TextInput({
             <input
                 onChange={handleChange}
                 id={id}
+                name={id}
                 value={value}
                 className="w-full border border-outline bg-dark text-white rounded-lg px-4 py-3"
             />
