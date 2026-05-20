@@ -1,3 +1,23 @@
+import ScreenshotsDisplay, { ScreenshotInfo } from "../components/ScreenshotsDisplay"
+
+const screenshots: ScreenshotInfo[] = [
+    {
+        src: "admin-school-table.png",
+        size: "",
+        alt: "",
+    },
+    {
+        src: "admin-school-validation.png",
+        size: "",
+        alt: "",
+    },
+    {
+        src: "admin-staff.png",
+        size: "",
+        alt: "",
+    },
+]
+
 export default function AdminDashboard() {
     return (
         <>
@@ -64,6 +84,10 @@ export default function AdminDashboard() {
                     </li>
                 </ul>
             </div>
+            <ScreenshotsDisplay
+                screenshots={screenshots}
+                folder="pa-admin"
+            />
         </>
     )
 }
