@@ -1,3 +1,33 @@
+import ScreenshotsDisplay, { ScreenshotInfo } from "../components/ScreenshotsDisplay"
+
+const screenshots: ScreenshotInfo[] = [
+    {
+        src: "cpi-website-homepage.png",
+        size: "",
+        alt: ""
+    },
+    {
+        src: "cpi-website-software.png",
+        size: "",
+        alt: ""
+    },
+    {
+        src: "cpi-website-modal.png",
+        size: "",
+        alt: ""
+    },
+    {
+        src: "cpi-website-pipeline-expanded.png",
+        size: "",
+        alt: ""
+    },
+    {
+        src: "cpi-website-press.png",
+        size: "",
+        alt: ""
+    },
+]
+
 export default function CPIWebsite() {
     return (
         <>
@@ -71,6 +101,10 @@ export default function CPIWebsite() {
                     </li>
                 </ul>
             </div>
+            <ScreenshotsDisplay 
+                screenshots={screenshots}
+                folder="cpi-website"
+            />
         </>
     )
 }

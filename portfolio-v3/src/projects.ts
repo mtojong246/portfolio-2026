@@ -5,8 +5,8 @@ import AdminPreview from './assets/images/mypaboxadmin-preview.png';
 import MegascribePreview from './assets/images/MegascribePreview.png';
 import CPIPreview from './assets/images/cpi-website-preview.png';
 import LifestyleMedlyPreview from './assets/images/lifestyle-medly-preview.png';
-import EventsPreview from './assets/images/events-preview.png';
-import RenewPreview from './assets/images/renew-preview.png';
+// import EventsPreview from './assets/images/events-preview.png';
+// import RenewPreview from './assets/images/renew-preview.png';
 
 import AIReportingTool from './routes/Projects/sections/AIReportingTool';
 import React from 'react';
@@ -15,8 +15,8 @@ import myPABoxV2 from './routes/Projects/sections/myPABoxV2';
 import MLPlatform from './routes/Projects/sections/MLPlatform';
 import AdminDashboard from './routes/Projects/sections/AdminDashboard';
 import LifestyleMedly from './routes/Projects/sections/LifestyleMedly';
-import EventsByAnsa from './routes/Projects/sections/EventsByAnsa';
-import Renew from './routes/Projects/sections/Renew';
+// import EventsByAnsa from './routes/Projects/sections/EventsByAnsa';
+// import Renew from './routes/Projects/sections/Renew';
 
 export type Status = "Complete" | "Ongoing" | "On hold"
 
@@ -329,7 +329,35 @@ export const projects: ProjectType[] = [
             "MUI",
             "Firebase",
         ],
-        techStack: [],
+        techStack: [
+            {
+                category: "Frontend",
+                stack: [
+                    "Typescript",
+                    "Next.js",
+                    "TailwindCSS",
+                    "Animate.css",
+                    "MUI",
+                    "React Context API",
+                ]
+            },
+            {
+                category: "Backend",
+                stack: [
+                    "Firebase Authentication",
+                    "Realtime Database"
+                ]
+            },
+            {
+                category: "Tools",
+                stack: [
+                    "Contentful",
+                    "Figma",
+                    "Git",
+                ]
+            }
+        ],
+        siteLink: "https://lifestyle-medly.vercel.app/",
         size: "",
         client: "Lifestyle Medly LLC",
         status: "Complete",
@@ -349,53 +377,53 @@ export const projects: ProjectType[] = [
         ],
         caseStudyComponent: LifestyleMedly,
     },
-    {
-        id: "qdLlkyOZjQ",
-        title: "Events by Ansa",
-        tech: [
-            "Wix Studio",
-            "Vanilla JS",
-            "CSS",
-        ],
-        techStack: [],
-        size: "",
-        client: "Events by Ansa",
-        status: "Complete",
-        description: SHORT_PARAGRAPH,
-        previewImg: EventsPreview,
-        introduction: SHORT_PARAGRAPH,
-        detailsType: "showcase",
-        caseStudy: [
-            {
-                title: SECTION_TITLE,
-                content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
-            }
-        ],
-        caseStudyComponent: EventsByAnsa,
-    },
-    {
-        id: "RlG9GlmbjD",
-        title: "Renew Aeshetics",
-        tech: [
-            "Squarespace",
-            "Vanilla JS",
-            "CSS",
-        ],
-        techStack: [],
-        size: "",
-        client: "Renew Aesthetics LLC",
-        status: "Complete",
-        description: SHORT_PARAGRAPH,
-        previewImg: RenewPreview,
-        introduction: SHORT_PARAGRAPH,
-        detailsType: "showcase",
-        caseStudy: [
-            {
-                title: SECTION_TITLE,
-                content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
-            }
-        ],
-        caseStudyComponent: Renew,
-    },
+    // {
+    //     id: "qdLlkyOZjQ",
+    //     title: "Events by Ansa",
+    //     tech: [
+    //         "Wix Studio",
+    //         "Vanilla JS",
+    //         "CSS",
+    //     ],
+    //     techStack: [],
+    //     size: "",
+    //     client: "Events by Ansa",
+    //     status: "Complete",
+    //     description: SHORT_PARAGRAPH,
+    //     previewImg: EventsPreview,
+    //     introduction: SHORT_PARAGRAPH,
+    //     detailsType: "showcase",
+    //     caseStudy: [
+    //         {
+    //             title: SECTION_TITLE,
+    //             content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
+    //         }
+    //     ],
+    //     caseStudyComponent: EventsByAnsa,
+    // },
+    // {
+    //     id: "RlG9GlmbjD",
+    //     title: "Renew Aeshetics",
+    //     tech: [
+    //         "Squarespace",
+    //         "Vanilla JS",
+    //         "CSS",
+    //     ],
+    //     techStack: [],
+    //     size: "",
+    //     client: "Renew Aesthetics LLC",
+    //     status: "Complete",
+    //     description: SHORT_PARAGRAPH,
+    //     previewImg: RenewPreview,
+    //     introduction: SHORT_PARAGRAPH,
+    //     detailsType: "showcase",
+    //     caseStudy: [
+    //         {
+    //             title: SECTION_TITLE,
+    //             content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
+    //         }
+    //     ],
+    //     caseStudyComponent: Renew,
+    // },
 ]
 
