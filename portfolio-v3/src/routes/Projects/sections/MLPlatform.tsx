@@ -3,6 +3,7 @@ import ModelDetailsImg from '../../../assets/cpi-ml/ml-model-details.png';
 import ModelFamilyImg from '../../../assets/cpi-ml/ml-model-family.png';
 import ReadAcrossImg from '../../../assets/cpi-ml/ml-read-across.png';
 import PredictionImg from '../../../assets/cpi-ml/ml-single-prediction.png';
+import JobImg from '../../../assets/cpi-ml/ml-jobs.png';
 import ScreenshotsDisplay, { ScreenshotInfo } from '../components/ScreenshotsDisplay';
 
 const screenshots: ScreenshotInfo[] = [
@@ -31,6 +32,11 @@ const screenshots: ScreenshotInfo[] = [
         size: "",
         alt: "",
     },
+    {
+        img: JobImg,
+        size: "",
+        alt: "",
+    }
 ]
 
 export default function MLPlatform() {
