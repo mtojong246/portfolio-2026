@@ -53,6 +53,18 @@ export default function MLPlatform() {
                     as they were requested by internal users and external clients.`}
                 </p>
                 <h2>My role</h2>
+                <h3>Frontend Developer</h3>
+                <ul>
+                    <li>
+                        {`Built all UI components from the ground up using TailwindCSS and Material UI, \
+                        implementing the redesigned Figma mockups with a focus on consistency, usability, \
+                        and responsiveness`}
+                    </li>
+                    <li>
+                        {`Integrated FastAPI endpoints client-side using Orval for type-safe API client \
+                        generation and React Query for efficient server state management and data fetching`}
+                    </li>
+                </ul>
                 <h3>UX Designer</h3>
                 <ul className="list-disc">
                     <li>
@@ -66,18 +78,6 @@ export default function MLPlatform() {
                     <li>
                         {`Designed new and improved data visualization components to make complexs model \
                         output more interpretable and accessible to non-technical user`}
-                    </li>
-                </ul>
-                <h3>Frontend Developer</h3>
-                <ul>
-                    <li>
-                        {`Built all UI components from the ground up using TailwindCSS and Material UI, \
-                        implementing the redesigned Figma mockups with a focus on consistency, usability, \
-                        and responsiveness`}
-                    </li>
-                    <li>
-                        {`Integrated FastAPI endpoints client-side using Orval for type-safe API client \
-                        generation and React Query for efficient server state management and data fetching`}
                     </li>
                 </ul>
                 <h2>Technical Highlights</h2>
