@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router";
+import { ImageKitProvider } from '@imagekit/react';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +12,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ImageKitProvider 
+        urlEndpoint={`https://ik.imagekit.io/${process.env.REACT_APP_IMAGEKIT_ID}/portfolio`}
+      >
+        <App />
+      </ImageKitProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

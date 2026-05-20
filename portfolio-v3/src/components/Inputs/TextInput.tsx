@@ -5,11 +5,13 @@ export default function TextInput({
     id,
     value,
     handleChange,
+    type,
 }: {
     label: string,
     id: string,
-    value: string,
+    value?: string,
     handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
+    type?: string,
 }) {
     return (
         <div className="flex flex-col justify-start items-start gap-1">
@@ -17,8 +19,10 @@ export default function TextInput({
             <input
                 onChange={handleChange}
                 id={id}
+                name={id}
                 value={value}
-                className="w-full border border-outline bg-dark text-white rounded-lg px-4 py-3"
+                type={type}
+                className="w-full border border-outline bg-dark text-white rounded-lg px-4 py-3 text-[14px]"
             />
         </div>
     )

@@ -1,4 +1,8 @@
 
+:root {
+  --primary-font-family: "Sora", sans-serif;
+  --secondary-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 .glass {
     /* From https://css.glass */
@@ -269,6 +273,8 @@
 
 .timeline .timeline-item {
   /* padding: 10px 24px; */
+  padding-top: 12px;
+  padding-bottom: 12px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -319,7 +325,8 @@
     left: 31px;
   }
 
-  .timeline .timeline-item {
+  .timeline .timeline-item.left,
+  .timeline .timeline-item.right {
     width: 100%;
     padding-left: 70px;
     padding-right: 0px;
@@ -414,6 +421,20 @@
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+#form-submit .icon,
+#form-back .icon {
+  transform: translateX(0);
+  transition: all 0.1s ease-in-out;
+}
+
+#form-submit:hover .icon {
+  transform: translateX(2px);
+}
+
+#form-back:hover .icon {
+  transform: translateX(-2px);
+}
+
 #form-submit:hover, .pulse-btn:hover {
   border: 1px solid;
   box-shadow: inset 0 0 20px rgba(0, 249, 2145, .5), 0 0 20px rgba(0, 249, 214, .2);
@@ -445,3 +466,62 @@
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
+
+
+.case-study-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  max-width: 600px;
+  width: 100%;
+  gap: 24px;
+}
+
+.case-study-component h3 {
+  font-family: var(--secondary-font-family);
+  font-size: 18px;
+}
+
+.case-study-component h2 {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.case-study-component h4 {
+  font-weight: 600;
+  color: #C7C7C8;
+}
+
+.case-study-component ul {
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+.case-study-component li {
+  margin-bottom: 12px;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+}
+
+.case-study-grid .tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.case-study-grid .wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.case-study-grid .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+

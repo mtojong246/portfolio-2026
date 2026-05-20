@@ -3,8 +3,8 @@ import SectionHeader from "../../../components/SectionHeader";
 import { ReactComponent as EmailIcon } from '../../../assets/icons/Email.svg';
 import { ReactComponent as LinkedinIcon } from '../../../assets/icons/Linkedin.svg';
 import { ReactComponent as GithubIcon } from '../../../assets/icons/Github.svg';
-import ContactForm from "../components/ContactForm";
 import { EMAIL_LINK, GITHUB_LINK, LINKEDIN_LINK } from "../../../constants";
+import ContactForm from "../components/ContactForm";
 
 interface ContactInfo {
     contactType: string;
@@ -66,15 +66,16 @@ export default function Contact() {
     return (
         <div id="contact" className="w-full bg-dark px-6 sm:px-10 py-[64px] sm:py-[100px]">
             <div className="mx-auto max-w-[1200px] h-full">
-                <div className="flex flex-col justify-start items-start gap-[64px] w-full">
+                <div className="flex flex-col justify-start items-start gap-8 w-full">
                     <SectionHeader 
                         title="Contact"
                         subtitle="Get In Touch"
                     />
                     <div className="w-full flex flex-col md:flex-row justify-start md:justify-between items-center md:items-start gap-[64px]">
                         <div className="w-full md:w-1/2 flex flex-col justify-start items-start">
-                            <p className="mb-[32px] text-white">
-                                Lorem ipsum dolor sit amet consectetur. Quis quis vitae pretium pharetra. 
+                            <p className="mb-[32px] text-white font-light">
+                                {`Whether you have a project idea, an opportunity, or just want to say hello - my inbox is always open.\
+                                Reach out through any of the channels below or send me a message directly.`}
                             </p>
                             <div className="w-full contact-grid">
                                 {contacts.map(contact => (
