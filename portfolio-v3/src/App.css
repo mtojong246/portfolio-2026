@@ -525,3 +525,14 @@
   grid-row: span 2;
 }
 
+.next-project-box .next-project-preview {
+  transform: translateY(-75%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.next-project-box:hover .next-project-preview {
+  transform: translateY(-80%);
+  opacity: 1;
+}
+
