@@ -114,7 +114,7 @@ export default function Project() {
                             <img 
                                 alt={`${project.title} Preview`}
                                 src={project.previewImg ?? PLACEHOLDER_LINK}
-                                className="object-cover h-full w-full"
+                                className="object-cover object-top h-full w-full"
                             />
                         </div>
                         {/* Case study / Showcase */}

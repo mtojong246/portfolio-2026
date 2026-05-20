@@ -56,6 +56,10 @@ export default function myPABoxV2() {
                         components using TailwindCSS and Material UI`}
                     </li>
                     <li>
+                        {`Implemented global state management with Redux Toolkit to efficiently manage \
+                        and share application state across components`}
+                    </li>
+                    <li>
                         {`Configured and integrated the OpenAI API to power an LLM-driven personal \
                         statement generation module driven by structured applicant data`}
                     </li>
