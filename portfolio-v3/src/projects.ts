@@ -116,47 +116,6 @@ export const projects: ProjectType[] = [
         caseStudyComponent: AIReportingTool,
     },
     {
-        id: "eTEhsi2nCk",
-        title: "CPI Business Website",
-        tech: [
-            "Squarespace",
-            "Vanilla JS",
-            "CSS",
-        ],
-        techStack: [
-            {
-                category: "Frontend",
-                stack: [
-                    "Javascript",
-                    "HTML",
-                    "CSS",
-                ]
-            },
-            {
-                category: "Tools",
-                stack: [
-                    "Squarespace",
-                    "Figma",
-                ]
-            }
-        ],
-        siteLink: "https://collaborations.com/",
-        size: "",
-        client: "CPI",
-        status: "Complete",
-        description: "A modern redesign of CPI’s business website.",
-        previewImg: CPIPreview,
-        introduction: SHORT_PARAGRAPH,
-        detailsType: "showcase",
-        caseStudy: [
-            {
-                title: SECTION_TITLE,
-                content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
-            }
-        ],
-        caseStudyComponent: CPIWebsite,
-    },
-    {
         id: "zLHTA6jUuT",
         title: "myPABox v2",
         tech: [
@@ -215,6 +174,58 @@ export const projects: ProjectType[] = [
         caseStudyComponent: myPABoxV2,
     },
     {
+        id: "NnuuwihwLC",
+        title: "Admin Dashboard",
+        tech: [
+            "Typescript",
+            "React",
+            "Firebase",
+        ],
+        techStack: [
+            {
+                category: "Frontend",
+                stack: [
+                    "Typescript",
+                    "React",
+                    "TailwindCSS",
+                    "MUI",
+                    "Redux Toolkit",
+                ]
+            },
+            {
+                category: "Backend",
+                stack: [
+                    "Firebase Authentication",
+                    "Realtime Database"
+                ]
+            },
+            {
+                category: "Tools",
+                stack: [
+                    "React Quill",
+                    "Git",
+                ]
+            }
+        ],
+        size: "",
+        client: "myPABox",
+        status: "Complete",
+        description: (
+            `An internal admin dashboard that centralizes Physician Assistant program \
+            and application data entry and validation workflows for myPAbox.`
+        ),
+        previewImg: AdminPreview,
+        introduction: SHORT_PARAGRAPH,
+        detailsType: "showcase",
+        caseStudy: [
+            {
+                title: SECTION_TITLE,
+                content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
+            }
+        ],
+        caseStudyComponent: AdminDashboard,
+    },
+    {
         id: "8fvEURi38H",
         title: "ML Training & Prediction Platform",
         tech: [
@@ -268,47 +279,36 @@ export const projects: ProjectType[] = [
         caseStudyComponent: MLPlatform,
     },
     {
-        id: "NnuuwihwLC",
-        title: "Admin Dashboard",
+        id: "eTEhsi2nCk",
+        title: "CPI Business Website",
         tech: [
-            "Typescript",
-            "React",
-            "Firebase",
+            "Squarespace",
+            "Vanilla JS",
+            "CSS",
         ],
         techStack: [
             {
                 category: "Frontend",
                 stack: [
-                    "Typescript",
-                    "React",
-                    "TailwindCSS",
-                    "MUI",
-                    "Redux Toolkit",
-                ]
-            },
-            {
-                category: "Backend",
-                stack: [
-                    "Firebase Authentication",
-                    "Realtime Database"
+                    "Javascript",
+                    "HTML",
+                    "CSS",
                 ]
             },
             {
                 category: "Tools",
                 stack: [
-                    "React Quill",
-                    "Git",
+                    "Squarespace",
+                    "Figma",
                 ]
             }
         ],
+        siteLink: "https://collaborations.com/",
         size: "",
-        client: "myPABox",
+        client: "CPI",
         status: "Complete",
-        description: (
-            `An internal admin dashboard that centralizes Physician Assistant program \
-            and application data entry and validation workflows for myPAbox.`
-        ),
-        previewImg: AdminPreview,
+        description: "A modern redesign of CPI’s business website.",
+        previewImg: CPIPreview,
         introduction: SHORT_PARAGRAPH,
         detailsType: "showcase",
         caseStudy: [
@@ -317,7 +317,7 @@ export const projects: ProjectType[] = [
                 content: `${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}\n\n${LONG_PARAGRAPH}`,
             }
         ],
-        caseStudyComponent: AdminDashboard,
+        caseStudyComponent: CPIWebsite,
     },
     {
         id: "CIz10HUFip",

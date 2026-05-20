@@ -1,3 +1,26 @@
+import SchoolDetailsImg from '../../../assets/pa-v2/pa-school-details.png';
+import EssayImg from '../../../assets/pa-v2/pa-essay.png';
+import EvaluationsImg from '../../../assets/pa-v2/pa-evaluations.png';
+import ScreenshotsDisplay, { ScreenshotInfo } from '../components/ScreenshotsDisplay';
+
+const screenshots: ScreenshotInfo[] = [
+    {
+        img: SchoolDetailsImg,
+        size: "",
+        alt: "",
+    },
+    {
+        img: EssayImg,
+        size: "",
+        alt: "",
+    },
+    {
+        img: EvaluationsImg,
+        size: "",
+        alt: "",
+    },
+]
+
 export default function myPABoxV2() {
     return (
         <>
@@ -83,6 +106,7 @@ export default function myPABoxV2() {
                     </li>
                 </ul>
             </div>
+            <ScreenshotsDisplay screenshots={screenshots} />
         </>
     )
 }
