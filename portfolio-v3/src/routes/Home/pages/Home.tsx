@@ -12,15 +12,16 @@ const loadTagCanvas = () => {
     (window as any).TagCanvas.Start('skillsCanvas', 'tags', {
       textFont: 'Sora',
       textColour: '#00F9D6',
+      textHeight: 16,
       outlineColour: 'transparent',
       reverse: true,
       depth: 0.8,
-      maxSpeed: 0.01,
+      maxSpeed: 0.008,
       weight: true,
       noMouse: true,
       initial: [0.3, -0.1],
       wheelZoom: false,
-      shape: 'vcylinder',
+      shape: 'sphere',
     });
   } catch(err:any) {
     console.log(err);
@@ -41,21 +42,21 @@ export default function Home({
     useEffect(() => {
         loadTagCanvas();
 
-        const canvas = document.getElementById('skillsCanvas') as HTMLCanvasElement;
-        const container = document.getElementById('skillsCanvasContainer');
+        // const canvas = document.getElementById('skillsCanvas') as HTMLCanvasElement;
+        // const container = document.getElementById('skillsCanvasContainer');
 
-        const resizeObserver = new ResizeObserver(() => {
-            if (!canvas || !container) return;
-            canvas.width = container.clientWidth;
-            canvas.height = container.clientHeight;
-            (window as any).TagCanvas.Update("skillsCanvas");
-        });
+        // const resizeObserver = new ResizeObserver(() => {
+        //     if (!canvas || !container) return;
+        //     canvas.width = container.clientWidth;
+        //     canvas.height = container.clientHeight;
+        //     (window as any).TagCanvas.Update("skillsCanvas");
+        // });
 
-        if (container) resizeObserver.observe(container);
+        // if (container) resizeObserver.observe(container);
 
-        return () => {
-            resizeObserver.disconnect();
-        }
+        // return () => {
+        //     resizeObserver.disconnect();
+        // }
     }, []);
     
     useEffect(() => {

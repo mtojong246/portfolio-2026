@@ -4,10 +4,14 @@ const skills: string[] = [
     'Python',
     'HTML/CSS',
     'TailwindCSS',
+    'SCSS',
     'Bootstrap',
     'MaterialUI',
+    'Context API',
+    'Redux',
     'Docker',
     'Airflow',
+    'AWS',
     'SQL',
     'Langchain',
     'React',
@@ -18,13 +22,14 @@ const skills: string[] = [
     'MongoDB',
     'Postgres',
     'Figma',
+    'Git',
 ]
 
 export default function SkillsChart() {
     return (
         <>
         <div id="skillsCanvasContainer" className="w-full min-[870px]:w-1/2 max-w-[600px]">
-            <canvas width={500} height={500} id="skillsCanvas"></canvas>
+            <canvas width={500} height={500} id="skillsCanvas" style={{ width: "100%", }}></canvas>
         </div>
         <div id="tags">
             <ul>
