@@ -40,7 +40,7 @@ export interface ProjectType {
     siteLink?: string;
     status: Status;
     description: string;
-    previewImg?: string;
+    previewImg: string;
     introduction: string;
     detailsType: "case-study" | "showcase";
     caseStudy: { title: string; content: string }[];

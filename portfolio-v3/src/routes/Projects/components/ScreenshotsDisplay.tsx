@@ -25,7 +25,6 @@ export default function ScreenshotsDisplay({
                             loading="lazy"
                             className="w-full h-full object-cover"
                         />
-                        {/* <img alt={alt} src={src} className="w-full h-full object-cover"/> */}
                     </div>
                 )
             })}
