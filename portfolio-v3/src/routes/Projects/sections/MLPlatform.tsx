@@ -1,39 +1,33 @@
-import HighlightingImg from '../../../assets/cpi-ml/ml-highlighting.png';
-import ModelDetailsImg from '../../../assets/cpi-ml/ml-model-details.png';
-import ModelFamilyImg from '../../../assets/cpi-ml/ml-model-family.png';
-import ReadAcrossImg from '../../../assets/cpi-ml/ml-read-across.png';
-import PredictionImg from '../../../assets/cpi-ml/ml-single-prediction.png';
-import JobImg from '../../../assets/cpi-ml/ml-jobs.png';
 import ScreenshotsDisplay, { ScreenshotInfo } from '../components/ScreenshotsDisplay';
 
 const screenshots: ScreenshotInfo[] = [
     {
-        img: HighlightingImg,
+        src: "ml-highlighting.png",
         size: "",
         alt: "",
     },
     {
-        img: ModelDetailsImg,
+        src: "ml-model-details.png",
         size: "",
         alt: "",
     },
     {
-        img: ModelFamilyImg,
+        src: "ml-model-family.png",
         size: "",
         alt: "",
     },
     {
-        img: ReadAcrossImg,
+        src: "ml-read-across.png",
         size: "",
         alt: "",
     },
     {
-        img: PredictionImg,
+        src: "ml-single-prediction.png",
         size: "",
         alt: "",
     },
     {
-        img: JobImg,
+        src: "ml-jobs.png",
         size: "",
         alt: "",
     }
@@ -102,7 +96,10 @@ export default function MLPlatform() {
                     </li>
                 </ul>
             </div>
-            <ScreenshotsDisplay screenshots={screenshots}/>
+            <ScreenshotsDisplay 
+                screenshots={screenshots}
+                folder='cpi-ml'
+            />
         </>
     )
 }

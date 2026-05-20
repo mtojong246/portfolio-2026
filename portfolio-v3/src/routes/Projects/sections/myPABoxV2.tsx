@@ -5,17 +5,17 @@ import ScreenshotsDisplay, { ScreenshotInfo } from '../components/ScreenshotsDis
 
 const screenshots: ScreenshotInfo[] = [
     {
-        img: SchoolDetailsImg,
+        src: "pa-school-details.png",
         size: "",
         alt: "",
     },
     {
-        img: EssayImg,
+        src: "pa-essay.png",
         size: "",
         alt: "",
     },
     {
-        img: EvaluationsImg,
+        src: "pa-evaluations.png",
         size: "",
         alt: "",
     },
@@ -106,7 +106,10 @@ export default function myPABoxV2() {
                     </li>
                 </ul>
             </div>
-            <ScreenshotsDisplay screenshots={screenshots} />
+            <ScreenshotsDisplay 
+                screenshots={screenshots} 
+                folder='pa-v2'
+            />
         </>
     )
 }
