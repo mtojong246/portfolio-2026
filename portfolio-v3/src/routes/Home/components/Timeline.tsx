@@ -28,22 +28,22 @@ const TimelineContainer = ({
 
     return (
         <div className={`timeline-item ${dir}`}>
-            <div className="w-full flex flex-col justify-start items-stretch px-6 border border-outline bg-light rounded-[16px]">
+            <div className="w-full flex flex-col justify-start items-stretch px-4 sm:px-6 border border-outline bg-light rounded-[16px]">
                 {/* Top section */}
-                <div className="w-full flex flex-col justify-start items-stretch gap-3 py-6 border-b border-outline">
-                    <div className="w-full flex justify-between items-center gap-4">
+                <div className="w-full flex flex-col justify-start items-stretch gap-4 py-4 sm:py-6 border-b border-outline">
+                    <div className="timeline-title w-full flex justify-between items-start gap-4">
                         <p className="text-[18px] font-bold text-white">{positionTitle}</p>
                         <div className="px-[12px] py-[2px] text-[14px] text-black bg-white rounded-xl">
                             {companyName}
                         </div>
                     </div>
-                    <div className="w-full flex justify-between items-center gap-4">
+                    <div className="w-full flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-4">
                         <p className="text-white text-[14px]">{employmentType} / {locationType}</p>
                         <p className="text-white text-[14px]">{dateRange}</p>
                     </div>
                 </div>
                 {/* Bottom section */}
-                <div className="w-full flex flex-col-reverse justify-start items-stretch gap-4 pt-4 pb-6">
+                <div className="w-full flex flex-col-reverse justify-start items-stretch gap-4 pt-3 sm:pt-4 pb-4 sm:pb-6">
                     <div className="flex flex-wrap justify-start items-start gap-2">
                         {skills.map(skill => (
                             <div className="py-1 px-3 rounded-full text-accent text-xs bg-[#00F9D6]/[0.1]">{skill}</div>

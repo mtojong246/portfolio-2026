@@ -46,7 +46,7 @@ const WorkCard = ({
                     className="object-cover h-full"
                 />
             </div>
-            <div className="w-full flex flex-col justify-start items-start gap-2 p-6 shrink-0 relative">
+            <div className="w-full flex flex-col justify-start items-start gap-2 p-4 sm:p-6 shrink-0 relative">
                 <p className="text-white font-semibold">{title}</p>
                 <p className="subtitle-default text-secondary text-[12px] text-left">{tech.join(' / ')}</p>
                 <p className="subtitle-hover text-accent text-[12px] text-left">Show {detailsType === 'case-study' ? 'Case Study' : 'Project'} →</p>

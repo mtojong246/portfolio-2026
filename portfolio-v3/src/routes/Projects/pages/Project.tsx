@@ -73,7 +73,7 @@ export default function Project() {
                 <div className="w-full p-6 sm:p-10">
                     <div className="max-w-[1200px] mx-auto flex flex-col justify-start items-center">
                         {/* Title section */}
-                        <div className="flex flex-col justify-start items-start gap-[48px] max-w-[600px] w-full">   
+                        <div className="flex flex-col justify-start items-start gap-[32px] sm:gap-[48px] max-w-[600px] w-full">   
                             <motion.div 
                                 key={id}
                                 initial={{ opacity: 0, y: 8 }}
@@ -83,7 +83,7 @@ export default function Project() {
                             >
                                 <StatusBadge status={project.status}/>
                                 <h1 
-                                    className="text-white font-bold text-[40px]"
+                                    className="text-white font-bold text-[32px] sm:text-[40px]"
                                 >
                                     {project.title}
                                 </h1>
@@ -110,7 +110,7 @@ export default function Project() {
                             <TechStack techStack={project.techStack}/>
                         </div>
                         {/* Image/gallery */}
-                        <div className="w-full my-[64px] h-[600px] rounded-[16px] overflow-hidden mb-[64px]">
+                        <div className="w-full my-[48px] sm:my-[64px] h-[600px] rounded-[16px] overflow-hidden">
                             <img 
                                 alt={`${project.title} Preview`}
                                 src={project.previewImg ?? PLACEHOLDER_LINK}

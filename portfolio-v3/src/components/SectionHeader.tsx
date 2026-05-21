@@ -16,10 +16,10 @@ export default function SectionHeader({
                 viewport={{ once: true, amount: 0.3 }}
                 className="flex flex-col justify-start items-start gap-4">
                 <div className="flex justify-start items-center gap-4">
-                    <div className="w-[24px] h-[1px] border border-secondary" />
-                    <p className="text-secondary font-medium">{subtitle}</p>
+                    <div className="w-[16px] h-[1px] bg-secondary" />
+                    <p className="text-secondary text-[14px] uppercase font-mono">{subtitle}</p>
                 </div>
-                <h2 className="font-semibold text-[32px] text-white">{title}</h2>
+                <h2 className="font-semibold text-[26px] sm:text-[32px] text-white">{title}</h2>
             </motion.div>
         </AnimatePresence>
     )

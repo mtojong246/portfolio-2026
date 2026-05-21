@@ -1,4 +1,3 @@
-
 :root {
   --primary-font-family: "Sora", sans-serif;
   --secondary-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -322,23 +321,29 @@
 
 @media screen and (max-width: 48rem) {
   .timeline::after {
-    left: 31px;
+    left: 12px;
   }
 
   .timeline .timeline-item.left,
   .timeline .timeline-item.right {
     width: 100%;
-    padding-left: 70px;
+    padding-left: 40px;
     padding-right: 0px;
   }
 
   .timeline .timeline-item.left::after,
   .timeline .timeline-item.right::after {
-    left: 22px;
+    left: 3px;
   }
 
   .timeline .timeline-item.right {
     left: 0%;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .timeline-title {
+    flex-direction: column;
   }
 }
 
@@ -534,5 +539,11 @@
 .next-project-box:hover .next-project-preview {
   transform: translateY(-80%);
   opacity: 1;
+}
+
+@media screen and (max-width: 48rem) {
+  .next-project-box {
+    position: static;
+  }
 }
 

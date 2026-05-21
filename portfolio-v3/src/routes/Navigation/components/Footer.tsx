@@ -26,7 +26,7 @@ const footerLinks: FooterLink[] = [
 
 export default function Footer() {
     return (
-        <div className="w-full flex justify-between items-center gap-8 px-6 sm:px-10 py-6 bg-dark">
+        <div className="w-full flex flex-col-reverse sm:flex-row justify-center sm:justify-between items-center gap-5 sm:gap-8 px-6 sm:px-10 py-6 bg-dark">
             <p className="text-white text-[14px]">
                 MelanieTojong @2026. All rights reserved.
             </p>

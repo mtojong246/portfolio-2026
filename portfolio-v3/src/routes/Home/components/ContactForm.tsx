@@ -71,7 +71,7 @@ export default function ContactForm() {
 
     return (
         <AnimatePresence mode="wait">
-        <div className="w-full rounded-[16px] h-[600px] border border-outline bg-light p-8">
+        <div className="w-full rounded-[16px] h-[600px] border border-outline bg-light p-6 sm:p-8">
             <p className="text-[18px] font-semibold mb-8 text-white">Send me a message</p>
             {!isSuccess ? (
                 <motion.form 
