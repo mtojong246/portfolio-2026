@@ -6,6 +6,7 @@ import Experience from "../sections/Experience";
 import Work from "../sections/Work";
 import StickyNav from "../components/StickyNav";
 import Menu from "../../Navigation/components/Menu";
+import { useLocation } from "react-router";
 
 const loadTagCanvas = () => {
   try {
@@ -39,24 +40,10 @@ export default function Home({
     showMenu: boolean,
     toggleMenu: () => void,
 }) {
+    const { hash } = useLocation();
+
     useEffect(() => {
         loadTagCanvas();
-
-        // const canvas = document.getElementById('skillsCanvas') as HTMLCanvasElement;
-        // const container = document.getElementById('skillsCanvasContainer');
-
-        // const resizeObserver = new ResizeObserver(() => {
-        //     if (!canvas || !container) return;
-        //     canvas.width = container.clientWidth;
-        //     canvas.height = container.clientHeight;
-        //     (window as any).TagCanvas.Update("skillsCanvas");
-        // });
-
-        // if (container) resizeObserver.observe(container);
-
-        // return () => {
-        //     resizeObserver.disconnect();
-        // }
     }, []);
     
     useEffect(() => {
@@ -106,6 +93,17 @@ export default function Home({
         }
 
     }, []);
+
+    useEffect(() => {
+        if (!hash) return;
+
+        const timeout = setTimeout(() => {
+            const el = document.getElementById(hash.replace('#', ''));
+            if (el) el.scrollIntoView();
+        }, 0);
+
+        return () => clearTimeout(timeout);
+    }, [hash]);
 
     return (
         <>

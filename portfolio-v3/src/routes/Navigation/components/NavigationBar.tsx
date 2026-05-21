@@ -4,19 +4,13 @@ import { ReactComponent as LogoIcon } from '../../../assets/icons/portfolio-logo
 import MenuButton from '../../../components/Buttons/MenuButton';
 import useNav from '../../../useNav';
 
-const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) section.scrollIntoView({ behavior: 'smooth' })
-}
-
-
 
 export default function NavigationBar({
     toggleMenu,
 }: {
     toggleMenu: () => void,
 }) {
-    const { navigateToHome } = useNav();
+    const { navigateToHome, navigateToSection } = useNav();
 
     const routes: {label: string, action: (e:any) => void}[] = [
         {
@@ -25,19 +19,19 @@ export default function NavigationBar({
         },
         {
             label: "// about",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('about') }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('about') }
         },
         {
             label: "// experience",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('experience') }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('experience') }
         },
         {
             label: "// work",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('work') }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('work') }
         },
         {
             label: "// contact",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('contact') }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('contact') }
         }
     ]
 

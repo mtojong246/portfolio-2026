@@ -18,9 +18,21 @@ const useNav = () => {
         window.scrollTo(0,0);
     }
 
+    const navigateToSection = (id: string) => {
+        const section = document.getElementById(id);
+
+        if (section && pathname === '/') {
+            section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate(`/#${id}`);
+        }
+
+    }
+
     return {
         navigateToRoute,
         navigateToHome,
+        navigateToSection,
     }
 };
 
