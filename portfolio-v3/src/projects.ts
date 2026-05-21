@@ -2,7 +2,7 @@
 import MLPreview from './assets/images/MLPreview.png';
 import myPABoxPreview from './assets/images/mypabox-preview.png';
 import AdminPreview from './assets/images/mypaboxadmin-preview.png';
-import MegascribePreview from './assets/images/MegascribePreview2.png';
+import MegascribePreview from './assets/images/MegascribePreview.png';
 import CPIPreview from './assets/images/cpi-website-preview.png';
 import LifestyleMedlyPreview from './assets/images/lifestyle-medly-preview.png';
 // import EventsPreview from './assets/images/events-preview.png';
