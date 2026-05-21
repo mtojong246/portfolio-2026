@@ -110,7 +110,7 @@ export default function Project() {
                             <TechStack techStack={project.techStack}/>
                         </div>
                         {/* Image/gallery */}
-                        <div className="w-full my-[48px] sm:my-[64px] h-[600px] rounded-[16px] overflow-hidden">
+                        <div className="w-full my-[48px] sm:my-[64px] rounded-[16px] overflow-hidden">
                             <img 
                                 alt={`${project.title} Preview`}
                                 src={project.previewImg ?? PLACEHOLDER_LINK}
