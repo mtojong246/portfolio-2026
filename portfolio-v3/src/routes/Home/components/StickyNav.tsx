@@ -1,18 +1,23 @@
 import { MouseEvent } from "react";
-import { useNavigate } from "react-router";
 
 const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: 'smooth' })
 }
 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    })
+}
+
 export default function StickyNav() {
-    const navigate = useNavigate();
 
     const routes: {label: string, action: (e:any) => void}[] = [
         {
             label: "// home",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigate('/') }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToTop(); }
         },
         {
             label: "// about",

@@ -1,7 +1,8 @@
 import { MouseEvent } from 'react';
-import { useNavigate } from 'react-router';
 import { ReactComponent as DownloadIcon } from '../../../assets/icons/Download.svg';
+import { ReactComponent as LogoIcon } from '../../../assets/icons/portfolio-logo.svg';
 import MenuButton from '../../../components/Buttons/MenuButton';
+import useNav from '../../../useNav';
 
 const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -9,17 +10,18 @@ const scrollToSection = (id: string) => {
 }
 
 
+
 export default function NavigationBar({
     toggleMenu,
 }: {
     toggleMenu: () => void,
 }) {
-    const navigate = useNavigate();
+    const { navigateToHome } = useNav();
 
     const routes: {label: string, action: (e:any) => void}[] = [
         {
             label: "// home",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigate('/') }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToHome() }
         },
         {
             label: "// about",
@@ -46,7 +48,15 @@ export default function NavigationBar({
             <div className='flex gap-6 justify-start items-center'>
                 <MenuButton toggleMenu={toggleMenu}/>
                 <div className="w-[100px] flex justify-start">
-                    <p className="text-white text-[32px] font-bold">MT</p>
+                    <button 
+                        onClick={(e: any) => {
+                            e.preventDefault();
+                            navigateToHome();
+                        }}
+                        className="w-[45px]"
+                    >
+                        <LogoIcon />
+                    </button>
                 </div>
             </div>
             <div className="hidden md:flex gap-6">

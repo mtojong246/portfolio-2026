@@ -46,7 +46,7 @@ const TimelineContainer = ({
                 <div className="w-full flex flex-col-reverse justify-start items-stretch gap-4 pt-4 pb-6">
                     <div className="flex flex-wrap justify-start items-start gap-2">
                         {skills.map(skill => (
-                            <div className="px-[12px] py-[2px] text-[14px] text-black bg-accent-secondary rounded-xl">{skill}</div>
+                            <div className="py-1 px-3 rounded-full text-accent text-xs bg-[#00F9D6]/[0.1]">{skill}</div>
                         ))}
                     </div>
                     <p className="text-white text-[14px] font-light">{description}</p>

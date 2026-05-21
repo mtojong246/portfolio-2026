@@ -5,6 +5,7 @@ import { ReactComponent as ArrowLeft } from '../../../assets/icons/Arrow-Left.sv
 import { motion } from 'motion/react';
 import { generateRandomString } from "../../../utils";
 import useNav from "../../../useNav";
+import { PLACEHOLDER_LINK } from "../../../constants";
 
 const ArrowButton = ({
     icon,
@@ -70,14 +71,14 @@ export default function NextProjectBox({
     }
 
     return (
-        <motion.div 
+        <motion.div
             key={generateRandomString()}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.3, ease: 'easeIn' }}
-            className="fixed bottom-[24px] sm:bottom-[40px] right-[24px] sm:right-[40px] max-w-[260px]"
+            className="next-project-box fixed bottom-[24px] sm:bottom-[40px] right-[24px] sm:right-[40px] max-w-[260px]"
         >
-            <div className="relative bg-white rounded-[16px] p-8 flex flex-col justify-start items-start gap-6">
+            <div className="w-full relative bg-white rounded-[6px] p-8 flex flex-col justify-start items-start gap-6 z-[20]">
                 <div className="flex justify-between items-center gap-3">
                     <p>Next Project</p>
                     <div className="flex gap-2">
@@ -85,7 +86,14 @@ export default function NextProjectBox({
                         <ArrowButton action={goToNextProject} icon={<ArrowRight />}/>
                     </div>
                 </div>
-                <p className="text-[18px] font-medium">{nextProject && nextProject.title}</p>
+                <p className="text-[18px] font-medium font-mono">{nextProject && nextProject.title}</p>
+            </div>
+            <div className="next-project-preview absolute top-0 left-0 right-0 bottom-0 rounded-[6px] z-[10] overflow-hidden">
+                <img 
+                    src={nextProject ? nextProject.previewImg : PLACEHOLDER_LINK} 
+                    alt='next-project-preview'
+                    className="w-full object-cover"
+                />
             </div>
         </motion.div>
     )
