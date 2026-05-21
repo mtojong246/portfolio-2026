@@ -1,11 +1,7 @@
 import { MouseEvent } from 'react';
-import { useNavigate } from 'react-router';
 import { ReactComponent as CloseIcon } from '../../../assets/icons/x.svg';
+import useNav from '../../../useNav';
 
-const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) section.scrollIntoView({ behavior: 'smooth' })
-}
 
 export default function Menu({
     showMenu,
@@ -14,28 +10,28 @@ export default function Menu({
     showMenu: boolean,
     toggleMenu: () => void,
 }) {
-    const navigate = useNavigate();
+    const { navigateToHome, navigateToSection } = useNav();
 
     const routes: {label: string, action: (e:any) => void}[] = [
         {
             label: "// home",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigate('/'); toggleMenu() }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToHome(); toggleMenu() }
         },
         {
             label: "// about",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('about'); toggleMenu() }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('about'); toggleMenu() }
         },
         {
             label: "// experience",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('experience'); toggleMenu() }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('experience'); toggleMenu() }
         },
         {
             label: "// work",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('work'); toggleMenu() }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('work'); toggleMenu() }
         },
         {
             label: "// contact",
-            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); scrollToSection('contact'); toggleMenu() }
+            action: (e:MouseEvent<HTMLButtonElement>) => { e.preventDefault(); navigateToSection('contact'); toggleMenu() }
         }
     ]
 

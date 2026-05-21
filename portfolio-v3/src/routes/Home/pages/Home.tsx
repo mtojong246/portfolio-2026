@@ -5,7 +5,6 @@ import Cover from "../sections/Cover";
 import Experience from "../sections/Experience";
 import Work from "../sections/Work";
 import StickyNav from "../components/StickyNav";
-import Menu from "../../Navigation/components/Menu";
 import { useLocation } from "react-router";
 
 const loadTagCanvas = () => {
@@ -33,13 +32,7 @@ const loadTagCanvas = () => {
 
 }
 
-export default function Home({
-    showMenu,
-    toggleMenu,
-}: {
-    showMenu: boolean,
-    toggleMenu: () => void,
-}) {
+export default function Home() {
     const { hash } = useLocation();
 
     useEffect(() => {
@@ -108,7 +101,6 @@ export default function Home({
     return (
         <>
             <StickyNav />
-            <Menu showMenu={showMenu} toggleMenu={toggleMenu}/>
             <Cover />
             <AboutMe />
             <Experience />

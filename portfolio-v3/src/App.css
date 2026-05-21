@@ -545,5 +545,9 @@
   .next-project-box {
     position: static;
   }
+
+  .next-project-preview {
+    display: none;
+  }
 }
 
