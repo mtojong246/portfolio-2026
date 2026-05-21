@@ -66,7 +66,7 @@ export default function Cover() {
                         id='cover-subtitle'
                         className="text-white text-[22px] mb-[64px] font-mono text-center"
                     >
-                        SOFTWARE ENGINEER, FRONTEND DEVELOPER & DESIGNER
+                        SOFTWARE ENGINEER, FRONTEND DEVELOPER & DESIGNER.
                     </motion.h3>
                     <motion.div 
                         initial={{ opacity: 0, y: 8 }}
