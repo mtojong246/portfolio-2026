@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router";
 
 const useNav = () => {
     const navigate = useNavigate();
-    const { pathname } = useLocation();
+    const { pathname, hash } = useLocation();
 
     const navigateToRoute = (url: string) => {
         navigate(url);
@@ -11,7 +11,14 @@ const useNav = () => {
 
     const navigateToHome = () => {
         if (pathname === '/') {
-            navigate(0);
+            if (!hash) {
+                navigate(0);
+            } else {
+                navigate('/');
+                setTimeout(() => {
+                    navigate(0);
+                }, 0);
+            }
         } else {
             navigate('/')
         };
