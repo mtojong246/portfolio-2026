@@ -20,7 +20,7 @@ export default function Experience() {
                             className="pulse-btn text-accent text-[14px] px-4 w-auto flex justify-center items-center h-[45px] relative"
                         >
                             <div className="w-[20px]"><DownloadIcon /></div>
-                            <p className="pl-3 hidden">Download Resume</p>
+                            <p className="pl-3 hidden sm:block">Download Resume</p>
                         </a>
                     </div>
                     <Timeline />
